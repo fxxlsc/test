@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!-- saved from url=(1963)http://vivivi-ide.newdaoapp.cn/x5/UI2/v_/system/designer/webIde/quickIde/previewActivity.w?path=vivivi-ide.newdaoapp.cn/uixweb/main&screenSize=375,587&appPath=main&config={%22orgId%22:%22u37011%22,%22indexUrl%22:%22index.w%22,%22projectId%22:%2260ab9560-cda6-4765-8585-1f366ba2a510%22,%22schemaID%22:null,%22appId%22:%2260ab9560-cda6-4765-8585-1f366ba2a510%22,%22appDomain%22:%22vivivi%22,%22appName%22:%22vivivi%22,%22isgit%22:false,%22apptype%22:%223%22,%22username%22:%22u37011%22,%22token%22:%2299b97548f4d441ce0b6092a6f88f48f5,eyJleHBpcmUiOjE1MzUwNDk0OTYsImhtYWMiOiKLTlahX3jv8ohgTIlXj0fha0Tq9iIsInRva2VuIjoiMzM5YjMwZjU2MzFkNDM4NThhNDA3ZDBhOTg3ZTk5YjYiLCJ1c2VyaWQiOiIwMzI3Njk2ZS04YTA5LTRhNWYtYWZlYy1iMmI2ZGQ0MTIxMTIiLCJ1c2VybmFtZSI6InUzNzAxMSJ9%22,%22locationPaasURL%22:%22http://www.newdao.net%22,%22paasURL%22:%22http://console-svc.console.svc.cluster.local%22,%22sessionId%22:%22eyJleHBpcmUiOjE1MzUwNDk0OTYsImhtYWMiOiKLTlahX3jv8ohgTIlXj0fha0Tq9iIsInRva2VuIjoiMzM5YjMwZjU2MzFkNDM4NThhNDA3ZDBhOTg3ZTk5YjYiLCJ1c2VyaWQiOiIwMzI3Njk2ZS04YTA5LTRhNWYtYWZlYy1iMmI2ZGQ0MTIxMTIiLCJ1c2VybmFtZSI6InUzNzAxMSJ9%22,%22appPath%22:%22u37011.60ab9560-cda6-4765-8585-1f366ba2a510.60ab9560-cda6-4765-8585-1f366ba2a510%22,%22x5appName%22:%22x5%22,%22mainapptype%22:%223%22,%22ext%22:{%22appName%22:%22vivivi%22,%22appServerPath%22:%22service/main%22,%22appUIPath%22:%22UI2/main%22,%22adminUIPath%22:%22%22,%22projectName%22:%22vivivi%22,%22indexURL%22:%22/main/index.w%22,%22adminURL%22:%22%22,%22idCompPackage%22:false,%22pathName%22:%22main%22,%22device%22:%22m%22,%22deviceType%22:%22wx%22,%22isMain%22:true,%22mainClient%22:{%22pathName%22:%22main%22,%22path%22:%22/UI2/main%22,%22clientName%22:%22vivivi%22,%22devices%22:[{%22deviceType%22:%22wx%22,%22indexURL%22:%22/main/index.w%22,%22device%22:%22m%22,%22deviceName%22:%22%E5%B0%8F%E7%A8%8B%E5%BA%8F%22}],%22clientCode%22:%22vivivi%22,%22isMain%22:true,%22index%22:100}},%22isCompDevMode%22:false}&apptype=3#!listContent -->
+<html style="width: 100%; height: 100%;" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths no-iosstatusbar appearance no-androidbrowser no-android44plus no-wechat no-devicem no-stb"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+        <script src="./vivi_files/modernizr-2.8.3.min.js.下载"></script>
+		<script id="__varReplace">
+    	
+    	    	window.__justep = window.__justep || {};
+				window.__justep.isDebug = false;
+				window.__justep.__packageMode = "1";
+				window.__justep.__isPackage = false;;
+				window.__justep.url = location.href;
+				window.__justep.versionInfo = {};
+		 
+    	</script>
+        <script id="__updateVersion">
+        
+				(function(url, mode){
+					if (("@"+"mode@") === mode) mode = "3";
+					if (("@"+"versionUrl@") === url) url = "system/service/common/app.j";
+					if ((mode!=="1" && (mode!="2") && (mode!="3"))) return;
+					var async = (mode=="1");
+					var x5Version = "noApp";
+					var x5AppAgents = /x5app\/([0-9.]*)/.exec(navigator.userAgent);
+					if(x5AppAgents && x5AppAgents.length > 1){
+					   	x5Version = x5AppAgents[1] || "";
+					} 
+					function createXhr(){
+						try {	
+							return new XMLHttpRequest();
+						}catch (tryMS) {	
+							var version = ["MSXML2.XMLHttp.6.0",
+							               "MSXML2.XMLHttp.3.0",
+							               "MSXML2.XMLHttp",
+							               "Miscrosoft.XMLHTTP"];
+							for(var i = 0; i < version.length; i++){
+								try{
+							    	return new ActiveXObject(version[i]);
+								}catch(e){}
+							}
+						}
+						throw new Error("您的系统或浏览器不支持XHR对象！");
+					}
+					
+					function createGuid(){	
+						var guid = '';	
+						for (var i = 1; i <= 32; i++){		
+							var n = Math.floor(Math.random()*16.0).toString(16);		
+							guid += n;		
+							if((i==8)||(i==12)||(i==16)||(i==20))			
+								guid += '-';	
+						}	
+						return guid;
+					}
+					
+					function parseUrl(href){
+						href = href.split("#")[0];
+						var items = href.split("?");
+						href = items[0];
+						var query = items[1] || "";
+						items = href.split("/");
+						var baseItems = [];
+						var pathItems = [];
+						var isPath = false;
+						for (var i=0; i<items.length; i++){
+							if (mode == "3"){
+								if (items[i] && (items[i].indexOf("v_") === 0) 
+										&& (items[i].indexOf("l_") !== -1)
+										&& (items[i].indexOf("s_") !== -1)
+										&& (items[i].indexOf("d_") !== -1)
+										|| (items[i]=="v_")){
+									isPath = true;
+									continue;
+								}
+							}else{
+								if (items[i] && (items[i].indexOf("v-")===0) && (items[i].charAt(items[i].length-1)=="-") ){
+									isPath = true;
+									continue;
+								}
+							}
+							if (isPath){
+								pathItems.push(items[i]);
+							}else{
+								baseItems.push(items[i]);	
+							}
+							
+						}
+						var base = baseItems.join("/");
+						if (base.charAt(base.length-1)!=="/") base += "/";
+						
+						var path = pathItems.join("/");
+						if (path.charAt(0) !== "/") path = "/" + path;
+						return [base, path, query];
+					}
+					
+					
+					var items = parseUrl(window.location.href);
+					var base = items[0];
+					var path = items[1];
+					var query = items[2];
+					var xhr = createXhr();
+					url += ((url.indexOf("?")!=-1) ? "&" : "?") +"_=" + createGuid();
+					if (mode === "3"){
+						url += "&url=" + path;
+						if (query)
+							url += "&" + query;
+					}
+					xhr.open('GET', base + url, async);
+					
+					if (async){
+						xhr.onreadystatechange=function(){
+							if((xhr.readyState == 4) && (xhr.status == 200) && xhr.responseText){
+								var versionInfo = JSON.parse(xhr.responseText);
+								window.__justep.versionInfo = versionInfo;
+								window.__justep.versionInfo.baseUrl = base;
+								if (query){
+									path = path + "?" + query;
+								}
+								path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+								var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+								versionInfo.resourceInfo.indexPageURL = indexUrl;
+								if(versionInfo.resourceInfo.resourceUpdateMode != "md5"){
+									if (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1){
+										versionInfo.resourceInfo.isNewVersion = true;
+									};
+								}
+							}
+						}
+					}
+					
+					try{
+						xhr.send(null);
+						if (!async && (xhr.status == 200) && xhr.responseText){
+							var versionInfo = JSON.parse(xhr.responseText);
+							window.__justep.versionInfo = versionInfo;
+							window.__justep.versionInfo.baseUrl = base;
+							if ((mode==="3") && window.__justep.isDebug){
+								/* 模式3且是调试模式不重定向 */
+							}else{
+								if (query){
+									path = path + "?" + query;
+								}
+								if(versionInfo.resourceInfo.resourceUpdateMode == "md5"){
+									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+									versionInfo.resourceInfo.indexPageURL = indexUrl; 
+								}else if (versionInfo.resourceInfo && versionInfo.resourceInfo.version && (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1)){
+									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
+									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
+									window.location.href = indexUrl;
+								}
+							}
+						}
+					}catch(e2){}
+				}("@versionUrl@", "@mode@"));
+                 
+        </script>
+    <link rel="stylesheet" href="./vivi_files/bootstrap.min.css" include="$model/UI2/system/components/bootstrap/lib/css/bootstrap,$model/UI2/system/components/bootstrap/lib/css/bootstrap-theme"><link rel="stylesheet" href="./vivi_files/comp.min.css" include="$model/UI2/system/components/justep/lib/css2/dataControl,$model/UI2/system/components/justep/input/css/datePickerPC,$model/UI2/system/components/justep/messageDialog/css/messageDialog,$model/UI2/system/components/justep/lib/css3/round,$model/UI2/system/components/justep/input/css/datePicker,$model/UI2/system/components/justep/row/css/row,$model/UI2/system/components/justep/dataTables/css/responsive,$model/UI2/system/components/justep/attachment/css/attachment,$model/UI2/system/components/justep/barcode/css/barcodeImage,$model/UI2/system/components/bootstrap/dropdown/css/dropdown,$model/UI2/system/components/justep/contents/css/contents,$model/UI2/system/components/justep/common/css/forms,$model/UI2/system/components/justep/dataTables/css/responsive,$model/UI2/system/components/justep/locker/css/locker,$model/UI2/system/components/justep/menu/css/menu,$model/UI2/system/components/justep/scrollView/css/scrollView,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/dialog/css/dialog,$model/UI2/system/components/justep/bar/css/bar,$model/UI2/system/components/justep/popMenu/css/popMenu,$model/UI2/system/components/justep/lib/css/icons,$model/UI2/system/components/justep/lib/css4/e-commerce,$model/UI2/system/components/justep/toolBar/css/toolBar,$model/UI2/system/components/justep/popOver/css/popOver,$model/UI2/system/components/justep/panel/css/panel,$model/UI2/system/components/bootstrap/carousel/css/carousel,$model/UI2/system/components/justep/wing/css/wing,$model/UI2/system/components/bootstrap/scrollSpy/css/scrollSpy,$model/UI2/system/components/justep/titleBar/css/titleBar,$model/UI2/system/components/justep/lib/css1/linear,$model/UI2/system/components/justep/numberSelect/css/numberList,$model/UI2/system/components/justep/restDataExcel/css/excel,$model/UI2/system/components/justep/list/css/list,$model/UI2/system/components/justep/dataTables/css/dataTables"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="$model/UI2/system/resources/system.res" src="./vivi_files/system.res.js.下载"></script><link type="text/css" rel="stylesheet" href="./vivi_files/forms.pc.css" include="$model/UI2/system/components/justep/common/css/forms.pc"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/x5/UI2/v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/previewActivity.w?$pageType=model&amp;$noCompile=true" src="./vivi_files/previewActivity.w"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="$model/UI2/system/designer/webIde/quickIde/previewActivity" src="./vivi_files/previewActivity.js.下载"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="$model/UI2/system/designer/webIde/quickIde/js/jquery.qrcode.min" src="./vivi_files/jquery.qrcode.min.js.下载"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="$model/UI2/system/designer/webIde/quickIde/view/menuTreeView" src="./vivi_files/menuTreeView.js.下载"></script></head>
+	
+    <body style="width:100%;height:100%;margin: 0;">
+        <script intro="none"></script>
+    	<div id="applicationHost" class="applicationHost" style="width:100%;height:100%;" __component-context__="block"><div xid="window" class="window c2u6bYf" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/window/window&#39;}" __cid="c2u6bYf" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/popOver/popOver,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/barcode/barcodeImage,$model/UI2/system/components/justep/button/buttonGroup,$model/UI2/system/components/justep/panel/panel," id="C81CE570D080000116A397721D4031E0_window">
+  <style __cid="c2u6bYf" class="c2u6bYf">.x-panel-content.c2u6bYf{background-color: rgb(245, 245, 245)} .leftDiv.c2u6bYf{width: 360px; height: 100%; background-color: rgb(255, 255, 255); overflow: hidden; position: relative} .rightDiv.c2u6bYf{width: 360px; margin: 5% 0%; overflow: hidden} .rightDiv.c2u6bYf .topdiv.c2u6bYf{margin-bottom: 100px} .leftDiv.c2u6bYf .mentTitle.c2u6bYf{padding: 5px; background-color: rgb(73, 86, 108); color: rgb(255, 255, 255)} .leftDiv.c2u6bYf .body-manager.c2u6bYf{width: 100%; height: 100%; overflow: auto} .group-ul.c2u6bYf{border-bottom: 1px solid rgb(210, 210, 210); margin: 0} .group-li.c2u6bYf, .page-li.c2u6bYf{height: 40px; line-height: 40px; padding: 0 10px} .group-li.c2u6bYf:hover, .page-li.c2u6bYf:hover{background-color: rgb(73, 86, 108)} .group-title.c2u6bYf{width: 300px; float: left} .page-title.c2u6bYf{width: 153px; margin-left: 32px} .group-title.c2u6bYf span.c2u6bYf, .page-title.c2u6bYf span.c2u6bYf{color: rgb(102, 102, 102)} .vertical-timeline-icon.c2u6bYf{float: left} .vertical-timeline-icon.c2u6bYf i.c2u6bYf{color: rgb(68, 68, 68)} .vertical-timeline-icon.c2u6bYf .according-select.c2u6bYf i.c2u6bYf{color: rgb(73, 86, 108)} .vertical-timeline-icon-small.c2u6bYf{width: 20px; height: 20px; font-size: 10px; text-align: center; color: rgb(181, 181, 181); display: inline-block} .vertical-timeline-icon-small.c2u6bYf:hover{border: 1px solid rgb(181, 181, 181); cursor: pointer} .iphone5.c2u6bYf{position: absolute; top: 49px; left: 56px; right: 57px; bottom: 44px; border-radius: 3px} .phone6.c2u6bYf{position: absolute; top: 97px; left: 46px; right: 47px; bottom: 102px; border-radius: 3px} .phone6plus.c2u6bYf{position: absolute; top: 106px; left: 28px; right: 30px; bottom: 111px; border-radius: 3px} .note3.c2u6bYf{position: absolute; top: 58px; left: 51px; right: 53px; bottom: 56px; border-radius: 3px} .screenMi4.c2u6bYf{position: absolute; border-radius: 3px; top: 60px; left: 15px; right: 15px; bottom: 90px} .screenIpad.c2u6bYf{position: absolute; border-radius: 3px; top: 66px; bottom: -45px; left: 30px; right: 30px} .phoneIpad.c2u6bYf{width: 550px; height: 670px; position: relative; margin: 0 auto} .liActive.c2u6bYf{background-color: rgb(204, 204, 204)} .x-full.x-contents.c2u6bYf > .x-contents-content.c2u6bYf{overflow: hidden} .btn-group-vertical.c2u6bYf a.c2u6bYf:hover{background-color: rgb(204, 204, 204); color: rgb(39, 38, 54)} .x-panel.pciqiaiy-iosstatusbar.c2u6bYf > .x-panel-bottom.c2u6bYf{height: 48px} .x-contents.c2u6bYf{overflow-x: hidden !important} .D_model.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px 0px no-repeat} .D_commonData.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -16px no-repeat} .D_baasData.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -32px no-repeat} .D_bizData.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -48px no-repeat} .D_contents.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -64px no-repeat} .D_tabs.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -80px no-repeat} .D_panel.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -96px no-repeat} .D_titleBar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -112px no-repeat} .D_bar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -128px no-repeat} .D_toolBar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -144px no-repeat} .D_scrollView.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -160px no-repeat} .D_row.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -176px no-repeat} .D_wing.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -192px no-repeat} .D_widgets.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -208px no-repeat} .D_windowContainer.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -224px no-repeat} .D_cellLayout_icon.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -240px no-repeat} .D_excel.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -256px no-repeat} .D_absoluteLayout.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -272px no-repeat} .D_smartContainer.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -288px no-repeat} .D_accordion.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -304px no-repeat} .D_tabs.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -320px no-repeat} .D_row.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -336px no-repeat} .D_dataEdit.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -352px no-repeat} .D_input.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -368px no-repeat} .D_password.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -384px no-repeat} .D_range.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -400px no-repeat} .D_output.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -416px no-repeat} .D_textarea.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -432px no-repeat} .D_button.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -448px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -464px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -480px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -496px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -512px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -528px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -544px no-repeat} .D_numberSelect.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -560px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -576px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -592px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -608px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -624px no-repeat} .D_input.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -640px no-repeat} .D_password.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -656px no-repeat} .D_range.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -672px no-repeat} .D_output.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -688px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -704px no-repeat} .D_textarea.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -720px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -736px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -752px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -768px no-repeat} .D_text.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -784px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -800px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -816px no-repeat} .D_form.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -832px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -848px no-repeat} .D_timer_icon.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -864px no-repeat} .D_code.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -880px no-repeat} .D_shell.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -896px no-repeat} .D_shellImpl.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -912px no-repeat} .D_ul.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -928px no-repeat} .D_ul.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -944px no-repeat} .D_ul.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -960px no-repeat} .D_table.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -976px no-repeat} .D_tree.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -992px no-repeat} .D_pagerBar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1008px no-repeat} .D_pagerLimitSelect.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1024px no-repeat} .D_popOver.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1040px no-repeat} .D_popMenu.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1056px no-repeat} .D_menu.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1072px no-repeat} .D_popPicker.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1088px no-repeat} .D_operation.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1104px no-repeat} .D_media.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1120px no-repeat} .D_table.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1136px no-repeat} .D_menu.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1152px no-repeat} .D_navs.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1168px no-repeat} .D_navbar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1184px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1200px no-repeat} .D_pagination.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1216px no-repeat} .D_pager.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1232px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1248px no-repeat} .D_scrollSpy.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1264px no-repeat} .D_grid.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1280px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1296px no-repeat} .D_print.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1312px no-repeat} .D_extendType.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1328px no-repeat} .D_router.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1344px no-repeat} .D_attachment.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1360px no-repeat} .D_calendar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1376px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1392px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1408px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1424px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1440px no-repeat} .D_popPicker.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1456px no-repeat} .D_datePickericon.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1472px no-repeat} .D_locker.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1488px no-repeat} .D_blob.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1504px no-repeat} .D_img.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1520px no-repeat} .D_barcodeImage.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1536px no-repeat} .D_richTextarea.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1552px no-repeat} .D_messageDialog.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1568px no-repeat} .D_dialog_icon_min.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1584px no-repeat} .D_dialog_icon_min.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1600px no-repeat} .D_dialog_icon_min.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1616px no-repeat} .D_windowRunner.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1632px no-repeat} .D_alert.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1648px no-repeat} .D_dialog.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1664px no-repeat} .D_button.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1680px no-repeat} .D_submit.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1696px no-repeat} .D_submit.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1712px no-repeat} .D_text.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1728px no-repeat} .D_file.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1744px no-repeat} .D_password.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1760px no-repeat} .D_checkbox.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1776px no-repeat} .D_radio.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1792px no-repeat} .D_img.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1808px no-repeat} .D_textarea.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1824px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1840px no-repeat} .D_div.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1856px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1872px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1888px no-repeat} .D_img.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1904px no-repeat} .D_label.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1920px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1936px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1952px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1968px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -1984px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2000px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2016px no-repeat} .D_span.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2032px no-repeat} .D_a.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2048px no-repeat} .D_div.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2064px no-repeat} .D_button.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2080px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2096px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2112px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2128px no-repeat} .D_reportData.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2144px no-repeat} .D_report.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2160px no-repeat} .D_chart.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2176px no-repeat} .D_attachment.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2192px no-repeat} .D_process-mini.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2208px no-repeat} .D_processChartMini.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2224px no-repeat} .D_orgTree.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2240px no-repeat} .D_dialog_icon_min.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2256px no-repeat} .D_orgSelect.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2272px no-repeat} .D_orgimg.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2288px no-repeat} .D_orgTree.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2304px no-repeat} .D_dialog_icon_min.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2320px no-repeat} .D_orgSelect.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2336px no-repeat} .D_psm.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2352px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2368px no-repeat} .D_focus.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2384px no-repeat} .D_smartFilter.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2400px no-repeat} .D_bizFilter.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2416px no-repeat} .D_gridFilter.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2432px no-repeat} .D_dateFilter.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2448px no-repeat} .D_orgFilter.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2464px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2480px no-repeat} .D_iconExport.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2496px no-repeat} .D_iconImport.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2512px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2528px no-repeat} .D_select.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2544px no-repeat} .D_media.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2560px no-repeat} .D_panel.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2576px no-repeat} .D_accordion.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2592px no-repeat} .D_table.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2608px no-repeat} .D_tabs.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2624px no-repeat} .D_menu.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2640px no-repeat} .D_navs.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2656px no-repeat} .D_navbar.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2672px no-repeat} .D_carousel.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2688px no-repeat} .D_alert.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2704px no-repeat} .D_row.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2720px no-repeat} .D_dialog.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2736px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2752px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2768px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2784px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2800px no-repeat} .D_scrollSpy.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2816px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2832px no-repeat} .D_pagination.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2848px no-repeat} .D_pager.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2864px no-repeat} .D_form.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2880px no-repeat} .D_row.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2896px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2912px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2928px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2944px no-repeat} .D_form.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2960px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2976px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -2992px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3008px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3024px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3040px no-repeat} .D_element.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3056px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3072px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3088px no-repeat} .D_group.c2u6bYf{background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/iconAll.jpg) 4px -3104px no-repeat} .x-titlebar.c2u6bYf .active.c2u6bYf{background-color: rgb(26, 179, 148) !important; color: rgb(255, 255, 255) !important; font-weight: 700; font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif} .x-titlebar.c2u6bYf{height: 48px} .x-titlebar.c2u6bYf .x-titlebar-title.c2u6bYf{padding: 5px 0px} .x-titlebar.c2u6bYf .btn-link.c2u6bYf{height: 38px; color: rgb(24, 166, 137)} .x-titlebar.c2u6bYf .btn.c2u6bYf{padding: 7px} .page-nav.active.c2u6bYf{border: 1px solid rgb(234, 173, 0); outline: 1px solid rgb(234, 173, 0); z-index: 1; cursor: move; position: relative} .btn-link.c2u6bYf{color: rgb(181, 181, 181)} .appContainer.c2u6bYf{margin: 0 20px; width: 350px; height: 640px; background-color: rgb(255, 255, 255); border: 2px solid rgb(128, 128, 128); border-radius: 5px; display: inline-block} #left-navs.c2u6bYf .btn-link.active.c2u6bYf{color: rgb(234, 173, 0)} .disnone.c2u6bYf{display: none} .disblock.c2u6bYf{display: inline-block} b.c2u6bYf, strong.c2u6bYf{font-weight: 700; color: rgb(103, 106, 108)} .navy-bg.c2u6bYf{background-color: rgb(26, 179, 148); color: rgb(255, 255, 255)} .blue-bg.c2u6bYf{background-color: rgb(28, 132, 198); color: rgb(255, 255, 255)} .manager-operator.c2u6bYf{display: none} .item.c2u6bYf{display: inline-block; width: 80px; height: 80px; border: 1px solid rgb(191, 191, 191); border-radius: 5px; position: relative; margin-left: 24px; margin-top: 10px} .item.c2u6bYf .que.c2u6bYf{display: inline-block; position: absolute; width: 20px; height: 20px; right: -23px; top: 10px; background: rgb(255, 255, 255); border: 1px solid rgb(191, 191, 191); color: rgb(191, 191, 191); border-radius: 50%; display: none} .item.c2u6bYf:hover .que.c2u6bYf{display: block} .item.c2u6bYf .que.c2u6bYf:hover{background: rgb(29, 198, 241); border: 1px solid transparent; color: rgb(255, 255, 255); cursor: pointer} .item.c2u6bYf > span.c2u6bYf{background: rgb(29, 198, 241); display: block; width: 70px; margin: 0 auto; height: 20px; margin-top: 2px; border-radius: 2px; text-align: center} .item.c2u6bYf > i.c2u6bYf{display: block; width: 70px; height: 50px; margin: 0 auto; margin-top: 3px; text-align: center; padding-top: 20px; padding-left: 25px} .high-item.c2u6bYf{display: inline-block; width: 80px; height: 80px; margin-left: 24px; position: relative} .high-item.c2u6bYf span.c2u6bYf:first-child{display: inline-block; background: rgb(29, 198, 241); width: 80px; height: 80px; border-radius: 5px; position: absolute; left: 0; bottom: 0; cursor: pointer} .high-item.c2u6bYf span.c2u6bYf:last-child{display: inline-block; background: rgb(68, 59, 59); width: 80px; height: 80px; border-radius: 5px; position: absolute; left: 0; bottom: 0; display: none} .high-item.c2u6bYf:hover span.c2u6bYf:last-child{opacity: 0.5; display: block; cursor: not-allowed} .high-item.c2u6bYf span.c2u6bYf:last-child span.c2u6bYf{display: inline-block; width: 80px; height: 80px; text-align: center; color: rgb(255, 255, 255); line-height: 80px} .comp-navs.c2u6bYf{width: 100%} .comp-navs.c2u6bYf > .btn.c2u6bYf{display: block; width: 25%; height: 60px; float: left; padding: 0px !important} .comp-navs.c2u6bYf > .btn.c2u6bYf:hover{color: rgb(0, 187, 156)} .comp-navs.c2u6bYf > .btn.c2u6bYf:hover span.c2u6bYf{color: rgb(0, 187, 156)} .comp-navs.c2u6bYf > .btn.c2u6bYf i.c2u6bYf{width: 100%; height: 40px; display: block; text-align: center; font-size: 28px !important} .comp-navs.c2u6bYf > .btn.c2u6bYf span.c2u6bYf{width: 100%; height: 20px; display: block; text-align: center; color: rgb(0, 0, 0)} .comp-navs.c2u6bYf span.c2u6bYf:hover{color: red} .templet-item.c2u6bYf{display: inline-block; width: 100px; height: 160px; margin-left: 24px; position: relative; border: 1px solid rgb(181, 181, 181); padding: 2px; margin-top: 10px} .templet-item.c2u6bYf > span.c2u6bYf:first-child{display: inline-block; background: rgb(29, 198, 241); width: 94px; height: 130px; position: absolute; left: 2px; top: 2px; cursor: pointer} .templet-item.c2u6bYf > span.c2u6bYf:last-child{display: inline-block; background: rgb(68, 59, 59); width: 94px; height: 30px; position: absolute; left: 2; bottom: 26px; display: none} .templet-item.c2u6bYf:hover span.c2u6bYf:last-child{opacity: 0.5; display: block; line-height: 30px; cursor: pointer} .templet-item.c2u6bYf p.c2u6bYf{position: absolute; bottom: -9px; text-align: center; width: 94px; height: 24px; line-height: 24px} .designer-mode-pc.c2u6bYf{padding-left: 100px !important} .designer-mode-pc.c2u6bYf .designer-toolbar.c2u6bYf, .designer-mode-pc.c2u6bYf .designer-top.c2u6bYf, .designer-mode-pc.c2u6bYf .designer-bottom.c2u6bYf{display: none} .designer-mode-pc.c2u6bYf .designer-toolbar-pc.c2u6bYf{display: block} .designer-mode-pc.c2u6bYf .designer-content-wraper.c2u6bYf{-moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important} .designer-mode-pc.c2u6bYf .designer-content-wraper.c2u6bYf .designer-content.c2u6bYf{height: 100% !important} .designer-content-wraper.c2u6bYf{background-color: rgb(243, 243, 243); margin-top: 30px; padding: 0 15px} .designer-content-wraper.c2u6bYf{width: 375px; position: relative; margin: auto; margin-top: 15px; -moz-border-radius: 35px; -webkit-border-radius: 35px; border-radius: 35px; -webkit-box-shadow: 0 0 10px rgb(182, 182, 182); -moz-box-shadow: 0 0 10px rgb(182, 182, 182); box-shadow: 0 0 10px rgb(182, 182, 182)} .quickide.c2u6bYf .designer-content.c2u6bYf{background: rgb(255, 255, 255); height: 600px} .designer-top.c2u6bYf{top: 0; left: 0; width: 100%; line-height: 40px; padding-left: 42%; height: 40px} .designer-bottom.c2u6bYf{width: 100%; bottom: 0; left: 0; padding-top: 8px; height: 60px} .designer-bottom.c2u6bYf > div.c2u6bYf{margin: auto; border: 2px solid rgb(244, 223, 203); border-radius: 100%; height: 30px; width: 30px} .c2u6bYf{-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none} .designer-left.c2u6bYf, .designer-right.c2u6bYf{background: rgb(255, 255, 255)} .designer-left.c2u6bYf, .designer-right.c2u6bYf{width: 360px; height: 100%; border: 0px solid rgb(221, 221, 221); border-top: 0; overflow: hidden} .after-shousuo.c2u6bYf{display: none; height: 100%; background: rgb(73, 86, 108)} .ide-left-shousuo.c2u6bYf{padding-left: 0px} .ide-left-shousuo.c2u6bYf > .leftDiv.c2u6bYf{width: 30px; background: rgb(73, 86, 108)} .ide-left-shousuo.c2u6bYf > .leftDiv.c2u6bYf > .c2u6bYf{display: none} .ide-left-shousuo.c2u6bYf > .leftDiv.c2u6bYf > .after-shousuo.c2u6bYf{display: block} .ide-left-shousuo.c2u6bYf > .ide-content.c2u6bYf{left: 35px} .ide-content.c2u6bYf{position: absolute; left: 360px; right: 360px} .hintText.c2u6bYf{color: rgb(102, 102, 102); margin: auto; margin-top: 10px; display: none} .hintText.c2u6bYf a.c2u6bYf{text-decoration: none} .x-popOver-content.c2u6bYf{margin-left: 80px !important; border: 1px solid rgb(204, 204, 204); border-radius: 5px} .tip-back.c2u6bYf{padding: 5px; cursor: pointer}</style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:&#39;$model/UI2/system/components/justep/model/model&#39;}" data-events="onLoad:modelLoad" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_model"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc32Mfai-iosstatusbar c2u6bYf" xid="panel1" data-bind="component:{name:&#39;$model/UI2/system/components/justep/panel/panel&#39;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_panel1"> 
+    <div class="x-panel-content ide-body c2u6bYf" xid="content2" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:&#39;$model/UI2/system/components/justep/panel/child&#39;}" __cid="c2u6bYf" _xid="C81CE570D4C000016BEC3AD019FF3BB0" id="C81CE570D080000116A397721D4031E0_content2" style="top: 0px; bottom: 0px; background-size: cover;"> 
+      <div xid="designerRight" class="rightDiv pull-right text-center c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_designerRight"> 
+        <div xid="topDiv" class="topdiv c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_topDiv"> 
+          <div class="qrcode c2u6bYf" __cid="c2u6bYf"><canvas width="120" height="120" __cid="c2u6bYf" class="c2u6bYf"></canvas></div>  
+          <p xid="p4" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_p4">手机扫描二维码预览，支持apploader扫码预览</p> 
+        </div>  
+        <div xid="qrCodeDiv" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_qrCodeDiv"> 
+          <div xid="downloadDiv" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_downloadDiv"> 
+            <div component="$model/UI2/system/components/justep/barcode/barcodeImage" class="xui-barcodeImage c2u6bYf" type="qr" templatename="templateName" xid="downdloadQR" style="height:120px;width:120px;" barcodeconfig="{mw:1.0}" config="{&quot;barcodeConfig&quot;:&quot;{mw:1.0}&quot;,&quot;type&quot;:&quot;qr&quot;}" data-bind="component:{name:&#39;$model/UI2/system/components/justep/barcode/barcodeImage&#39;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_downdloadQR" value="http://vivivi-ide.newdaoapp.cn/x5/UI2/v_6923_nol_zh_CNs_desktopd_pc/system/addones/loader/downloadAPP.w">
+              <img id="img-downdloadQR" src="./vivi_files/genBarcode.j" style="vertical-align: middle; display: inline; height: 100%; width: 100%;" __cid="c2u6bYf" class="c2u6bYf">
+            </div> 
+          </div>  
+          <p xid="p3" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_p3">手机浏览器扫码下载apploader（iOS+Android）</p> 
+        </div> 
+      </div>  
+      <div xid="designerLeft" class="leftDiv pull-left  c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_designerLeft"> 
+        <div xid="div1" class="mentTitle c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div1"> 
+          <span xid="span1" class="h5 c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span1">页面目录</span>  
+          <a class="btn btn-link btn-sm btn-only-icon hide-btn pull-right c2u6bYf" xid="hideResourceTreeBtn" icon="icon-chevron-left" style="margin-top: -5px;" title="隐藏资源视图" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;hideResourceTreeBtnClick&#39;)}" id="C81CE570D080000116A397721D4031E0_hideResourceTreeBtn"> 
+            <i xid="i22" class="icon-chevron-left c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i22"></i> 
+          </a> 
+        </div>  
+        <div class="body-manager c2u6bYf" xid="pageManager" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_pageManager"><ul class="group-ul c2u6bYf" __cid="c2u6bYf"><li class="group-li c2u6bYf" key="null" file="false" name="默认" filemode="" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title c2u6bYf" __cid="c2u6bYf"><div class="vertical-timeline-icon c2u6bYf" __cid="c2u6bYf"><i class="icon-android-folder c2u6bYf" __cid="c2u6bYf"></i></div><div xid="div12" class="pull-left c2u6bYf" style="margin-left:10px;" __cid="c2u6bYf"><span __cid="c2u6bYf" class="c2u6bYf">默认</span></div></div><div class="vertical-timeline-icon according-select pull-right c2u6bYf" xid="div16" __cid="c2u6bYf"><i class="linear c2u6bYf linear-chevronup" xid="i11" __cid="c2u6bYf"></i></div></li><ul __cid="c2u6bYf" class="c2u6bYf" style="display: none;"><li class="group-li page-li c2u6bYf" key="UI2/main/index.w" file="true" name="首页" filemode="m" canopen="undefined" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title page-title c2u6bYf" style="width:80%" __cid="c2u6bYf"><i class="icon-document c2u6bYf" style="font-size: 24px;margin-right: 10px;" __cid="c2u6bYf"></i> <span __cid="c2u6bYf" class="c2u6bYf">首页</span></div></li><li class="group-li page-li c2u6bYf" key="UI2/main/shangpin_fl.w" file="true" name="商品分类" filemode="m" canopen="undefined" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title page-title c2u6bYf" style="width:80%" __cid="c2u6bYf"><i class="icon-document c2u6bYf" style="font-size: 24px;margin-right: 10px;" __cid="c2u6bYf"></i> <span __cid="c2u6bYf" class="c2u6bYf">商品分类</span></div></li><li class="group-li page-li c2u6bYf" key="UI2/main/zhuangshi_jq.w" file="true" name="装饰技巧" filemode="m" canopen="undefined" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title page-title c2u6bYf" style="width:80%" __cid="c2u6bYf"><i class="icon-document c2u6bYf" style="font-size: 24px;margin-right: 10px;" __cid="c2u6bYf"></i> <span __cid="c2u6bYf" class="c2u6bYf">装饰技巧</span></div></li><li class="group-li page-li c2u6bYf" key="UI2/main/qudao_hz.w" file="true" name="渠道合作" filemode="m" canopen="undefined" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title page-title c2u6bYf" style="width:80%" __cid="c2u6bYf"><i class="icon-document c2u6bYf" style="font-size: 24px;margin-right: 10px;" __cid="c2u6bYf"></i> <span __cid="c2u6bYf" class="c2u6bYf">渠道合作</span></div></li><li class="group-li page-li c2u6bYf" key="UI2/main/guanyu_gs.w" file="true" name="关于公司" filemode="m" canopen="undefined" __cid="c2u6bYf" style="background-color: rgb(255, 255, 255);"><div class="group-title page-title c2u6bYf" style="width:80%" __cid="c2u6bYf"><i class="icon-document c2u6bYf" style="font-size: 24px;margin-right: 10px;" __cid="c2u6bYf"></i> <span __cid="c2u6bYf" class="c2u6bYf">关于公司</span></div></li></ul></ul></div>  
+        <div class="rRightDiv pull-left c2u6bYf" style="display:none;" __cid="c2u6bYf"> 
+          <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full c2u6bYf" xid="contents1" data-bind="component:{name:&#39;$model/UI2/system/components/justep/contents/contents&#39;}" data-config="{&quot;active&quot;:0}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_contents1"> 
+            <div class="x-contents-content active c2u6bYf" xid="listContent" style="overflow-y: scroll;" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:&#39;$model/UI2/system/components/justep/contents/content&#39;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_listContent"></div>  
+            <div class="x-contents-content c2u6bYf x-content-on-remoting-sibling" xid="typeContent" style="text-align:center;" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:&#39;$model/UI2/system/components/justep/contents/content&#39;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_typeContent"> 
+              <p __cid="c2u6bYf" class="c2u6bYf">此预览仅供参考，以实际设备为准</p>  
+              <div style="width:240px;margin:0 auto;" __cid="c2u6bYf" class="c2u6bYf"> 
+                <ul xid="ul1" class="phoneType c2u6bYf" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;ul1Click&#39;)}" id="C81CE570D080000116A397721D4031E0_ul1"> 
+                  <li xid="5Li" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_5Li"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2u6bYf" xid="5sBtn" style="width:100%;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;iphone 5&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_5sBtn"> 
+                      <i xid="i7" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i7"></i>  
+                      <span xid="span7" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span7">iphone 5</span> 
+                    </a> 
+                  </li>  
+                  <li xid="6Li" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_6Li"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2u6bYf" xid="6sBtn" style="width:100%;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;iphone 6&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_6sBtn"> 
+                      <i xid="i6" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i6"></i>  
+                      <span xid="span6" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span6">iphone 6</span> 
+                    </a> 
+                  </li>  
+                  <li xid="6plusLi" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_6plusLi"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2u6bYf" xid="6sBtn" style="width:100%;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;iphone 6plus&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_6sBtn"> 
+                      <i xid="i6" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i6"></i>  
+                      <span xid="span6" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span6">iphone 6plus</span> 
+                    </a> 
+                  </li>  
+                  <li xid="note3Li" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_note3Li"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c2u6bYf" xid="note4Btn" style="width:100%;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;三星Note3&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_note4Btn"> 
+                      <i xid="i8" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i8"></i>  
+                      <span xid="span8" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span8">三星Note3</span> 
+                    </a> 
+                  </li> 
+                </ul> 
+              </div> 
+            </div> 
+          </div> 
+        </div>  
+        <div xid="rLeftDiv" class="pull-left c2u6bYf" style="display:none;width:50px;" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_rLeftDiv"> 
+          <div xid="topBtnGroup" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_topBtnGroup"> 
+            <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group btn-group-vertical c2u6bYf tabbed" xid="buttonGroup1" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/buttonGroup&#39;}" data-config="{&quot;tabbed&quot;:true}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_buttonGroup1"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn c2u6bYf active" xid="catalogBtn" style="border:1px solid #888;border-top-right-radius: 5px;color:#272636;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;&quot;,&quot;target&quot;:&quot;listContent&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_catalogBtn"> 
+                <i xid="i19" style="width:32px;height:32px;margin:0 auto;background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/menu.png) no-repeat center;display:block" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i19"></i>  
+                <span xid="span22" style="display: block;text-align: center;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span22">目录</span> 
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn c2u6bYf" xid="modelBtn" style="border-bottom-right-radius: 5px;border:1px solid #888;border-bottom-left-radius: 5px;color:#272636;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;label&quot;:&quot;&quot;,&quot;target&quot;:&quot;typeContent&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_modelBtn"> 
+                <i xid="i20" style="width:32px;height:32px;margin:0 auto;background: url(../../../../../v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde/img/phone.png) no-repeat center;display:block" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i20"></i>  
+                <span xid="span22" style="display: block;text-align: center;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span22">机型</span> 
+              </a> 
+            </div> 
+          </div>  
+          <div xid="operBottom" style="border:1px solid transparent;border-radius:5px;height:120px;width:60px;background-color:#fff;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_operBottom"></div>  
+          <div xid="bottomBtnGroup" style="margin-top:40px;display:none;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_bottomBtnGroup"> 
+            <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group btn-group-vertical c2u6bYf tabbed" xid="buttonGroup2" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/buttonGroup&#39;}" data-config="{&quot;tabbed&quot;:true}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_buttonGroup2"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-icon-top c2u6bYf" xid="button4" style="padding:5px;border-radius:5px;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;icon&quot;:&quot;icon-ios7-heart&quot;,&quot;label&quot;:&quot;定制&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_button4"> 
+                <i xid="i4" class="icon-ios7-heart c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i4"></i>  
+                <span xid="span4" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span4">定制</span> 
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-icon-top c2u6bYf" xid="button5" style="padding:5px;border-radius:5px;" data-bind="component:{name:&#39;$model/UI2/system/components/justep/button/button&#39;}" data-config="{&quot;icon&quot;:&quot;icon-headphone&quot;,&quot;label&quot;:&quot;客服&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_button5"> 
+                <i xid="i5" class="icon-headphone c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i5"></i>  
+                <span xid="span5" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span5">客服</span> 
+              </a> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="after-shousuo c2u6bYf" xid="div10" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div10"> 
+          <a class="btn btn-link btn-sm btn-only-icon hide-btn color c2u6bYf" xid="a1" style="z-index:100;margin-left:-2px;" icon="icon-chevron-left" title="显示资源视图" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;showResourceTreeBtnClick&#39;)}" id="C81CE570D080000116A397721D4031E0_a1"> 
+            <i xid="i23" class="glyphicon glyphicon-th c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_i23"></i> 
+          </a>  
+          <div class="color c2u6bYf" title="显示资源视图" style="margin-top:30%;height:14px;padding-left:8px;word-break:break-all;width:12px;cursor:pointer;" xid="div9" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;showResourceTreeBtnClick&#39;)}" id="C81CE570D080000116A397721D4031E0_div9"></div> 
+        </div> 
+      </div>  
+      <div xid="div3" class="ide-content c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div3"> 
+        <div xid="designerContainer" class="designer-content-wraper c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_designerContainer" style="width: 407px; height: 671px;"> 
+          <div xid="div2" class="designer-top c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div2"> 
+            <div xid="div6" style="width:6px;height:6px;background:black;margin:auto;display:inline-block;border-radius: 3px;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div6"></div>  
+            <div xid="div7" style="width:50px;border:2px solid black;margin:auto;display:inline-block;margin-left:10px;border-radius: 2px;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div7"></div>  
+            <span xid="reloadApp" class="btn btn-link c2u6bYf" style="margin-left: 40px;color:black;" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;refreshWxApp&#39;),mouseover:$model._callModelFn.bind($model, &#39;refreshAppMouseover&#39;),mouseout:$model._callModelFn.bind($model, &#39;refreshAppMouseout&#39;)}" id="C81CE570D080000116A397721D4031E0_reloadApp">重启</span>  
+            <div xid="domaintips" style="position:absolute;width:210px;height:40px;background-color:#F5F5F5;z-index:999;font-size:12px;padding:0 5px;display:none;top:35px;right:0;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_domaintips"> 
+              <p __cid="c2u6bYf" class="c2u6bYf"> 
+                <font style="color:#ff0000" __cid="c2u6bYf" class="c2u6bYf">如预览与设计不一致，请点击重启！</font> 
+              </p> 
+            </div>  
+            <span xid="refreshApp" class="btn btn-link c2u6bYf" style="color:black;padding-left:0" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;refreshApp&#39;)}" id="C81CE570D080000116A397721D4031E0_refreshApp">刷新</span> 
+          </div>  
+          <div xid="designerContent" class="designer-content c2u6bYf" dir="ltr" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_designerContent" style="height: 587px;"> 
+            <iframe src="./vivi_files/main.html" xid="iframe1" width="100%" height="100%" style="background-color:white" frameborder="0" __cid="c2u6bYf" class="c2u6bYf" data-bind="event:{load:$model._callModelFn.bind($model, &#39;iframe1Load&#39;)}" id="C81CE570D080000116A397721D4031E0_iframe1"></iframe> 
+          </div>  
+          <div xid="div5" class="designer-bottom c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div5"> 
+            <div xid="div8" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div8"></div> 
+          </div> 
+        </div>  
+        <div xid="hintDiv" class="hintText c2u6bYf" style="width: 407px; padding: 0px 19px; display: block;" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_hintDiv"> 
+          <span xid="span1" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_span1">说明：部分功能需在小程序工具中查看实际效果</span>  
+          <a xid="tip1" class="tip1 c2u6bYf" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;a2Click&#39;)}" id="C81CE570D080000116A397721D4031E0_tip1">(查看详情)</a> 
+        </div> 
+      </div> 
+    </div>  
+    <style __cid="c2u6bYf" class="c2u6bYf">.x-panel.pc32Mfai-iosstatusbar >.x-panel-top {height: 0px;}.x-panel.pc32Mfai-iosstatusbar >.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pc32Mfai-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc32Mfai-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc32Mfai-iosstatusbar >.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pc32Mfai-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc32Mfai-iosstatusbar >.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc32Mfai-iosstatusbar >.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc32Mfai-iosstatusbar >.x-panel-content {top: 0px;}</style>
+  </div>  
+  <div component="$model/UI2/system/components/justep/popOver/popOver" class="x-popOver c2u6bYf" xid="hintPopover" data-bind="component:{name:&#39;$model/UI2/system/components/justep/popOver/popOver&#39;}" data-config="{&quot;anchor&quot;:&quot;.tip1&quot;,&quot;position&quot;:&quot;center&quot;,&quot;opacity&quot;:0,&quot;direction&quot;:&quot;left-top&quot;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_hintPopover"> 
+    <div class="x-popOver-overlay c2u6bYf" xid="div1" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div1" style="opacity: 0;"></div>  
+    <div class="x-popOver-content c2u6bYf" xid="div2" style="height:182px;width:320px;" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div2"> 
+      <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcUVNNV3-iosstatusbar c2u6bYf" xid="panel2" data-bind="component:{name:&#39;$model/UI2/system/components/justep/panel/panel&#39;}" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_panel2"> 
+        <div class="x-panel-content c2u6bYf" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:&#39;$model/UI2/system/components/justep/panel/child&#39;}" __cid="c2u6bYf" _xid="C81CE570D61000018FC093D212A0D000" id="C81CE570D080000116A397721D4031E0_content1" style="top: 0px; bottom: 0px; background-size: cover;"> 
+          <div xid="div11" style="background:rgb(252, 241, 202);padding:10px" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div11">
+            <div xid="div27" style="width:96%;padding:0 10px;" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div27"> 
+              <p style="font-weight: bold;" __cid="c2u6bYf" class="c2u6bYf">需要在小程序中查看实际效果的功能包括</p>  
+              <ol __cid="c2u6bYf" class="c2u6bYf"> 
+                <li __cid="c2u6bYf" class="c2u6bYf">1、支付、分享、客服</li>  
+                <li __cid="c2u6bYf" class="c2u6bYf">2、扫一扫、摇一摇、拨号</li>  
+                <li __cid="c2u6bYf" class="c2u6bYf">3、地理定位、收货地址</li>  
+                <li __cid="c2u6bYf" class="c2u6bYf">4、地图组件中的标记点,路线,圆,控件</li>  
+                <li __cid="c2u6bYf" class="c2u6bYf">5、录音、相机、摄像</li> 
+              </ol> 
+            </div>
+            <div xid="div28" style="height:20px;text-align:right" __cid="c2u6bYf" class="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div28">
+              <span class="tip-back c2u6bYf" __cid="c2u6bYf" data-bind="event:{click:$model._callModelFn.bind($model, &#39;span2Click&#39;)}">关闭</span>
+            </div>
+          </div>
+        </div>  
+        <style __cid="c2u6bYf" class="c2u6bYf">.x-panel.pcUVNNV3-iosstatusbar >.x-panel-top {height: 0px;}.x-panel.pcUVNNV3-iosstatusbar >.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pcUVNNV3-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcUVNNV3-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcUVNNV3-iosstatusbar >.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pcUVNNV3-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcUVNNV3-iosstatusbar >.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcUVNNV3-iosstatusbar >.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcUVNNV3-iosstatusbar >.x-panel-content {top: 0px;}</style>
+      </div> 
+    </div> 
+  </div>  
+  <div xid="div4" class="bodydiv c2u6bYf" style="display:none;" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div4"> 
+    <div xid="div16" class="clearfix c2u6bYf" __cid="c2u6bYf" id="C81CE570D080000116A397721D4031E0_div16"></div> 
+  </div> 
+<span component="$model/UI2/system/components/justep/messageDialog/messageDialog" type="OK" data-bind="component:{name:&#39;$model/UI2/system/components/justep/messageDialog/messageDialog&#39;}" __cid="c2u6bYf" class="c2u6bYf"><div class="x-modal-overlay c2u6bYf" __cid="c2u6bYf"></div><div class="x-modal c2u6bYf" __cid="c2u6bYf"><div class="x-modal-inner c2u6bYf" __cid="c2u6bYf"><div class="x-modal-title c2u6bYf" __cid="c2u6bYf">undefined</div><div class="x-modal-text c2u6bYf" __cid="c2u6bYf">undefined</div><input type="text" class="x-modal-prompt-input c2u6bYf" value="" __cid="c2u6bYf"></div><div class="x-modal-buttons c2u6bYf" __cid="c2u6bYf"><a class="x-modal-button x-modal-button-bold OK c2u6bYf" value="ok" __cid="c2u6bYf">确定</a><a class="x-modal-button x-modal-button-bold Yes c2u6bYf" value="yes" __cid="c2u6bYf">更新</a><a class="x-modal-button x-modal-button-bold No c2u6bYf" value="no" __cid="c2u6bYf">忽略</a><a class="x-modal-button x-modal-button-bold Cancel c2u6bYf" value="cancel" __cid="c2u6bYf">取消</a></div></div></span></div></div>
+        
+        <div id="downloadGCF" style="display:none;padding:50px;">
+        	<span>牛刀目前仅支持chrome和Safari浏览器，请更换！</span>
+        </div>
+    	<script>
+    	
+    	            //判断浏览器, 判断GCF
+    	 			var browser = {
+    			        isIe: function () {
+    			            return navigator.appVersion.indexOf("MSIE") != -1;
+    			        },
+    			        navigator: navigator.appVersion,
+    			        getVersion: function() {
+    			            var version = 999; // we assume a sane browser
+    			            if (navigator.appVersion.indexOf("MSIE") != -1)
+    			                // bah, IE again, lets downgrade version number
+    			                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    			            return version;
+    			        }
+    			    };
+    				function isGCFInstalled(){
+    			      try{
+    			        var i = new ActiveXObject('ChromeTab.ChromeFrame');
+    			        if (i) {
+    			          return true;
+    			        }
+    			      }catch(e){}
+    			      return false;
+    				}
+    	            //判断浏览器, 判断GCF
+    	            var __continueRun = true;
+    				if (browser.isIe() && (browser.getVersion() < 10) && !isGCFInstalled()) {
+    					document.getElementById("applicationHost").style.display = 'none';
+    					document.getElementById("downloadGCF").style.display = 'block';
+    					__continueRun = false;
+    	            }
+		 	
+    	</script>
+        <script id="_metaJS" src="./vivi_files/meta.js.下载"> </script>
+        <script id="_requireJS" src="./vivi_files/require.2.1.10.js.下载"> </script>
+        <script src="./vivi_files/core.min.js.下载"></script><script src="./vivi_files/common.min.js.下载"></script><script src="./vivi_files/comp.min.js.下载"></script><script src="./vivi_files/webIdeService.min.js.下载"></script><script id="_mainScript">
+        
+			if (__continueRun) {
+                window.__justep.cssReady = function(fn){
+                	var promises = [];
+                	for (var p in window.__justep.__ResourceEngine.__loadingCss){
+                		if(window.__justep.__ResourceEngine.__loadingCss.hasOwnProperty(p))
+                			promises.push(window.__justep.__ResourceEngine.__loadingCss[p].promise());
+                	}
+                	$.when.apply($, promises).done(fn);
+                };
+                
+            	window.__justep.__ResourceEngine = {
+            		readyRegExp : navigator.platform === 'PLAYSTATION 3' ? /^complete$/ : /^(complete|loaded)$/,
+            		url: window.location.href,	
+            		/*contextPath: 不包括语言 */
+            		contextPath: "",
+            		serverPath: "",
+            		__loadedJS: [],
+            		__loadingCss: {},
+            		onLoadCss: function(url, node){
+            			if (!this.__loadingCss[url]){
+            				this.__loadingCss[url] = $.Deferred();	
+                			if (node.attachEvent &&
+                                    !(node.attachEvent.toString && node.attachEvent.toString().indexOf('[native code') < 0) &&
+                                    !(typeof opera !== 'undefined' && opera.toString() === '[object Opera]')) {
+                                node.attachEvent('onreadystatechange', this.onLinkLoad.bind(this));
+                            } else {
+                                node.addEventListener('load', this.onLinkLoad.bind(this), false);
+                                node.addEventListener('error', this.onLinkError.bind(this), false);
+                            }
+            			}
+            		},
+            		
+            		onLinkLoad: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+            	        if (evt.type === 'load' ||
+                                (this.readyRegExp.test(target.readyState))) {
+            	        	var url = target.getAttribute("href");
+            	        	if (url && window.__justep.__ResourceEngine.__loadingCss[url]){
+            	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+            	        	}
+                        }
+            		},
+            		
+            		onLinkError: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+        	        	var url = target.getAttribute("href");
+        	        	if (url && window.__justep.__ResourceEngine.__loadingCss[url]){
+        	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+        	        	}
+            		},
+            		
+            		initContextPath: function(){
+            			var baseURL = document.getElementById("_requireJS").src;
+            			var before = location.protocol + "//" + location.host;
+            			var after = "/system/lib/require/require.2.1.10";
+            			var i = baseURL.indexOf(after);
+            			if (i !== -1){
+    	        			var middle = baseURL.substring(before.length, i);
+    						var items = middle.split("/");
+    						
+    						
+    						if ((items[items.length-1].indexOf("v_") === 0) 
+    								&& (items[items.length-1].indexOf("l_") !== -1)
+    								&& (items[items.length-1].indexOf("s_") !== -1)
+    								&& (items[items.length-1].indexOf("d_") !== -1)
+    								|| (items[items.length-1]=="v_")){
+    							items.splice(items.length-1, 1);
+    						}
+    						
+    						
+    						if (items.length !== 1){
+    							window.__justep.__ResourceEngine.contextPath = items.join("/");
+    						}else{
+    							window.__justep.__ResourceEngine.contextPath = before;
+    						}
+    						var index = window.__justep.__ResourceEngine.contextPath.lastIndexOf("/");
+    						if (index != -1){
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath.substr(0, index);
+    						}else{
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath;
+    						}
+            			}else{
+            				throw new Error(baseURL + " hasn't  " + after);
+            			}
+            		},
+            	
+            		loadJs: function(urls){
+            			if (urls && urls.length>0){
+            				var loadeds = this._getResources("script", "src").concat(this.__loadedJS);
+    	       				for (var i=0; i<urls.length; i++){
+								var url = urls[i];
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					this.__loadedJS[this.__loadedJS.length] = url;
+    	        					/*
+    	        					var script = document.createElement("script");
+    	        					script.src = url;
+    	        					document.head.appendChild(script);
+    	        					*/
+    	        					//$("head").append("<script  src='" + url + "'/>");
+									var url = require.toUrl("$UI" + url);
+    	        					$.ajax({
+    	        						url: url,
+    	        						dataType: "script",
+    	        						cache: true,
+    	        						async: false,
+    	        						success: function(){}
+    	        						});
+    	        				} 
+    	       				}
+            			}
+            		},
+            		
+            		loadCss: function(styles){
+           				var loadeds = this._getResources("link", "href");
+            			if (styles && styles.length>0){
+            				for (var i=0; i<styles.length; i++){
+    	       					var url = window.__justep.__ResourceEngine.contextPath + styles[i].url.replace("/UI2/", "/");
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					var include = styles[i].include || "";
+    	        					var link = $("<link type='text/css' rel='stylesheet' href='" + url + "' include='" + include + "'/>");
+    	        					this.onLoadCss(url, link[0]);
+    	        					$("head").append(link);
+    	        				} 
+            				}
+            			}
+            			
+            		},
+            		
+            		
+            		_isLoaded: function(url, loadeds){
+            			if (url){
+            				var newUrl = "";
+            				var items = url.split("/");
+            				var isVls = false;
+            				for (var i=0; i<items.length; i++){
+            					if (isVls){
+                					newUrl += "/" + items[i];
+            					}else{
+                					if (items[i] && (items[i].indexOf("v_")===0)
+            								&& (items[i].indexOf("l_")!==-1)
+            								&& (items[i].indexOf("s_")!==-1)
+            								&& (items[i].indexOf("d_")!==-1)
+            								|| (items[i]=="v_")){
+                						isVls = true;
+                					}
+            					}
+            				}
+            				if (!newUrl)
+            					newUrl = url;
+            				
+            				for (var i=0; i<loadeds.length; i++){
+								var originUrl = this._getOriginUrl(loadeds[i]);
+								if (originUrl && (originUrl.indexOf(newUrl)!==-1)){
+									return true;
+								}
+    						}
+            			}
+    					return false;
+            		},
+
+					_getOriginUrl: function(url){
+						var result = "";
+						if (url && (url.indexOf(".md5_")!==-1)){
+							url = url.split("#")[0];
+							url = url.split("?")[0];
+							var items = url.split(".");
+							for (var i=0; i<items.length; i++){
+								if ((i===items.length-2) && (items[i].indexOf("md5_")!==-1)){
+									continue;
+								}else{
+									if (i>0) result += ".";
+									result += items[i];
+								}
+							}
+						}else{
+							result = url;
+						}
+						return result;
+					},
+            		
+            		_getResources: function(tag, attr){
+    					var result = [];
+    					var scripts = $(tag);
+    					for (var i=0; i<scripts.length; i++){
+    						var v = scripts[i][attr];
+    						if (v){
+    							result[result.length] = v;
+    						}
+    					}
+    					return result;
+            		}
+            	};
+            	
+            	window.__justep.__ResourceEngine.initContextPath();
+    			requirejs.config({
+    				baseUrl: window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc/system/designer/webIde/quickIde',
+    			    paths: {
+    			    	/* 解决require.normalizeName与require.toUrl嵌套后不一致的bug   */
+    			    	'$model/UI2/v_': window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc',
+    			    	'$model/UI2': window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc',
+    			    	'$model': window.__justep.__ResourceEngine.serverPath,
+    			        'text': window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc/system/lib/require/text.2.0.10',
+    			        'bind': window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc/system/lib/bind/bind',
+    			        'jquery': window.__justep.__ResourceEngine.contextPath + '/v_6923_nol_zh_CNs_desktopd_pc/system/lib/jquery/jquery-1.11.1.min'
+    			    },
+    			    map: {
+    				        '*': {
+    				            res: '$model/UI2/system/lib/require/res',
+    				            service: '$model/UI2/system/lib/require/service',
+    				            cordova: '$model/UI2/system/lib/require/cordova',
+    				            w: '$model/UI2/system/lib/require/w',
+    				            css: '$model/UI2/system/lib/require/css'
+    				        }
+    				},
+    				waitSeconds: 300
+    			});
+    			
+    			requirejs(['require', 'jquery', '$model/UI2/system/lib/base/composition', '$model/UI2/system/lib/base/url', '$model/UI2/system/lib/route/hashbangParser', '$model/UI2/system/components/justep/versionChecker/versionChecker', '$model/UI2/system/components/justep/loadingBar/loadingBar', '$model/UI2/system/lib/jquery/domEvent',  '$model/UI2/system/lib/cordova/cordova'],  function (require, $, composition, URL, HashbangParser,versionChecker) { 
+    				document.addEventListener('deviceready', function() {
+    	                if (navigator && navigator.splashscreen && navigator.splashscreen.hide) {
+    	                	/*延迟隐藏，视觉效果更理想*/
+    	                	setTimeout(function() {navigator.splashscreen.hide();}, 800);
+    	                }
+    	            }, false);
+					setTimeout(function(){
+						versionChecker.check();
+					},2000);
+    				var context = {};
+    				context.model = '$model/UI2/system/designer/webIde/quickIde/previewActivity.w' + (document.location.search || "");
+    				context.view = $('#applicationHost').children()[0];
+    				var element = document.getElementById('applicationHost');
+
+					    				
+    				
+    				var ownerid = new URL(window.__justep.__ResourceEngine.url).getParam("$ownerid");
+    				var pwindow = opener;
+    				if (!pwindow && window.parent && window.parent.window){
+    					pwindow = window.parent.window;
+    				}
+    				if(ownerid && pwindow 
+    						&& pwindow.__justep && pwindow.__justep.windowOpeners
+    						&& pwindow.__justep.windowOpeners[ownerid]
+    						&& $.isFunction(pwindow.__justep.windowOpeners[ownerid].sendToWindow)){
+    					window.__justep.setParams = function(params){
+    						/* 给windowOpener提供再次传参数的接口  */
+    						params = params || {};
+    						composition.setParams(document.getElementById('applicationHost'), params);
+    					};
+    					var winOpener = pwindow.__justep.windowOpeners[ownerid];
+    					if(winOpener) winOpener.window = window;
+    					$(window).unload(function(event){
+    						if(winOpener && winOpener.dispatchCloseEvent) winOpener.dispatchCloseEvent();
+    					});
+    					var params = winOpener.sendToWindow();
+						context.owner = winOpener;
+						context.params = params || {};
+	        			composition.compose(element, context);
+    				}else{
+        				var params =  {};
+    					var state = new HashbangParser(window.location.hash).parse().__state;
+    					if (state){
+    						params = state.get("");
+    						try{
+    							params = JSON.parse(params);
+    							if (params.hasOwnProperty("__singleValue__")){
+    								params = params.__singleValue__;
+    							}
+    						}catch(e1){}
+    					}
+    					context.noUpdateState = true;
+        				context.params = params;
+        				composition.compose(element, context);
+    				}
+    			});    
+            }
+		 	
+        </script>
+    
+<div id="x-default-loadingbar" loadingnum="0" class="waiting" style="width: 1%; display: none;"><dt></dt><dd></dd></div><div id="x-default-overlay" class="x-default-overlay"></div></body></html>

@@ -1,0 +1,13 @@
+.box{
+  font-family: "微软雅黑"；
+}
+
+.banner image{
+  width: 100%;
+}
+form input,.section{
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: 80%;
+  margin-left: 10%;
+}

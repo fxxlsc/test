@@ -1,0 +1,55 @@
+<import src="/pages/templates/nav"/>
+<view class="banner">
+  <swiper autoplay="false" duration="500" circular="true">
+  <block wx:for="{{banner}}" wx:key='{{index}}'>
+    <swiper-item>
+      <image mode='widthFix' lazy-load="true" src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<template is="nav"/>
+<view class='hotactive'><text class='bigtext'>初春时节</text><text class='smalltext'>一年之始，何不来一次说走就走的旅行</text></view>
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!--  display: inline-block-->
+  <block wx:for="{{cunlist}}" wx:key="{{index}}">
+    <view class='abouttourbox' style="width: 400rpx; height: 360rpx; display: inline-block" ><view class='abouttour'>
+    <image data-index='{{index}}' bindtap='goods1' lazy-load='true' src='{{item.src}}'></image>
+    <text>{{item.text}}</text>
+    </view></view>
+  </block>
+</scroll-view>
+<view class='heikuang'></view>
+<view class='hotactive'><text class='bigtext'>夏至时分</text><text class='smalltext'>盛夏之景，何不去一看芳华</text></view>
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!--  display: inline-block-->
+  <block wx:for="{{xialist}}" wx:key="{{index}}">
+    <view class='abouttourbox' style="width: 400rpx; height: 360rpx; display: inline-block" ><view class='abouttour'>
+    <image data-index='{{index}}' bindtap='goods2' lazy-load='true' src='{{item.src}}'></image>
+    <text>{{item.text}}</text>
+    </view></view>
+  </block>
+</scroll-view>
+<view class='heikuang'></view>
+<view class='hotactive'><text class='bigtext'>残秋来临</text><text class='smalltext'>遍地金黄，何不去记录美好</text></view>
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!--  display: inline-block-->
+  <block wx:for="{{qiulist}}" wx:key="{{index}}">
+    <view class='abouttourbox' style="width: 400rpx; height: 360rpx; display: inline-block" ><view class='abouttour'>
+    <image data-index='{{index}}' bindtap='goods3' lazy-load='true' src='{{item.src}}'></image>
+    <text>{{item.text}}</text>
+    </view></view>
+  </block>
+</scroll-view>
+<view class='heikuang'></view>
+<view class='hotactive'><text class='bigtext'>凛冬将至</text><text class='smalltext'>银山雪树，山水之间藏着最美丽的美好</text></view>
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!--  display: inline-block-->
+  <block wx:for="{{donglist}}" wx:key="{{index}}">
+    <view class='abouttourbox' style="width: 400rpx; height: 360rpx; display: inline-block" ><view class='abouttour'>
+    <image data-index='{{index}}' bindtap='goods4' lazy-load='true' src='{{item.src}}'></image>
+    <text>{{item.text}}</text>
+    </view></view>
+  </block>
+</scroll-view>
+<view class='heikuang'></view>

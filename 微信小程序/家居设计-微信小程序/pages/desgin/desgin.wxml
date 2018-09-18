@@ -1,0 +1,82 @@
+
+<view class="box">
+<block wx:for="{{arr}}">
+  <view class="renwu">
+    <view class="touxiang">
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <view class="name">
+        <text>{{item.name}}</text>
+        <view class="job">
+          <text>{{item.job}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="desgin-product">
+      <view class="desgin-img">
+        <image src="{{item.src1}}" mode="widthFix"></image>
+        <image src="{{item.src2}}" mode="widthFix"></image>
+        <image src="{{item.src3}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</block> 
+
+<!-- 
+ <view class="renwu">
+    <view class="touxiang">
+      <image src="../../images/style1.png" mode="widthFix"></image>
+      <view class="name">
+        <text>Json</text>
+        <view class="job">
+          <text>资深设计师 | 2333成交</text>
+        </view>
+      </view>
+    </view>
+    <view class="desgin-product">
+      <view class="desgin-img">
+        <image src="../../images/style1.1.png" mode="widthFix"></image>
+        <image src="../../images/style1.2.png" mode="widthFix"></image>
+        <image src="../../images/style1.3.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view> 
+
+   <view class="renwu">
+    <view class="touxiang">
+      <image src="../../images/style1.png" mode="widthFix"></image>
+      <view class="name">
+        <text>Json</text>
+        <view class="job">
+          <text>资深设计师 | 2333成交</text>
+        </view>
+      </view>
+    </view>
+    <view class="desgin-product">
+      <view class="desgin-img">
+        <image src="../../images/style1.1.png" mode="widthFix"></image>
+        <image src="../../images/style1.2.png" mode="widthFix"></image>
+        <image src="../../images/style1.3.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view> 
+
+   <view class="renwu">
+    <view class="touxiang">
+      <image src="../../images/style1.png" mode="widthFix"></image>
+      <view class="name">
+        <text>Json</text>
+        <view class="job">
+          <text>资深设计师 | 2333成交</text>
+        </view>
+      </view>
+    </view>
+    <view class="desgin-product">
+      <view class="desgin-img">
+        <image src="../../images/style1.1.png" mode="widthFix"></image>
+        <image src="../../images/style1.2.png" mode="widthFix"></image>
+        <image src="../../images/style1.3.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>  -->
+
+  </view>  

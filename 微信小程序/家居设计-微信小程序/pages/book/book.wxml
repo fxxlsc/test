@@ -1,0 +1,15 @@
+<view class="box">
+  <view class="bookimg">
+    <image src="../../images/book2.png"></image>
+  </view>
+  <form bindsubmit="formSubimt">
+    <view class="input-message">
+      <input name="myName" placeholder="请输入您的姓名" bindinput="name" />
+      <input name="myPhone" placeholder="请输入您的电话" bindinput="iphone" />
+      <input name="myAddresss" placeholder="请输入您的地址" bindinput="adderess"/>
+      <textarea placeholder="请填写您的需求" />
+      <view class="btn-area"></view>
+      <button form-type="submit">确认提交</button>
+    </view>
+  </form>
+</view>

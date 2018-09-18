@@ -1,0 +1,72 @@
+<view class="shouye">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatoractiveColor}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" bindtap="listClickh"  id="{{index}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="sectionone">
+    <block wx:for="{{arr}}">
+      <view class="sectionone-item" bindtap="listClick" id="{{index}}">
+        <image src="{{item.src}}" mode="scaleToFill"></image>
+        <view class="sectionone-item-text">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+  <view class="contentone">
+    <view class="content-item-one">
+      <text class="content-text-one">Boutique case</text>
+    </view>
+    <view class="content-item-two">
+      <text class="content-text-two">精品案例</text>
+    </view>
+
+    <view class="imgtext">
+      <block wx:for="{{arr2}}">
+        <view bindtap="listClicko" id="{{index}}" >
+          <view class="content-img">
+            <image src="{{item.src}}"></image>
+          </view>
+          <view class="content-text">
+            <text class="text-one">{{item.title}}</text>
+          </view>
+          <view class="content-text">
+            <text class="text-two">{{item.titleo}}</text>
+          </view>
+          <button size="mini">查看详情</button>
+          <view class="num">
+            <view class="number"><text>14</text></view>
+            <view class="number"><text>APR</text></view>
+          </view>
+        </view>
+
+      </block>
+    </view>
+  </view>
+
+  <view class="contenttwo">
+    <view class="content-item-o">
+      <text class="content-text-o">Stylist recommended</text>
+    </view>
+    <view class="content-item-t">
+      <text class="content-text-t">设计师推荐</text>
+    </view>
+    <block wx:for="{{arr3}}">
+      <view class="stylename" bindtap="listCilckt" id="{{index}}">
+        <image src="{{item.src}}" mode="widthFix"></image>
+        <view class="style-text">
+          <text class="desgin-name">{{item.title}} </text>
+          <text class="minpai">{{item.titleo}}</text>
+          <text>{{item.titlet}}</text>
+          <text>{{item.titleth}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

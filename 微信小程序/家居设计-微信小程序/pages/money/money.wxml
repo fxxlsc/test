@@ -1,0 +1,7 @@
+<view class="box">
+    <block wx:for="{{imageSrc}}">
+        <view class="cash-coupon">
+            <image src="{{item.src}}" mode="widthFix" data-index="{{index}}"></image>
+        </view>
+    </block>
+</view>

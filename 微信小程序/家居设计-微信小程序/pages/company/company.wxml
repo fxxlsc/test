@@ -1,0 +1,75 @@
+<view class="box">
+<view class="titles">
+  <!--绑定事件处理函数bindtap-->
+  <!--给选中的组件，即数组当前项的下标与selectedTitle相等的组件，定义样式名titles-selected-->
+  <block wx:for="{{titles}}">
+    <view id="{{index}}" bindtap="bindtap" class="title {{index==selectedTitle ? 'title-selected' : ''}}">
+      {{item}}
+    </view>
+  </block>
+</view>
+<!--绑定事件处理函数bindchange-->
+<!-- <swiper bindchange="bindChange" current='{{selectedTitle}}' style="height:{{swiperHeight}}px"> -->
+  <!-- <block wx:for="{{titles}}"> -->
+    <!-- <swiper-item> -->
+      <!--设置5个样式名-->
+      <!-- <view class='page'> -->
+      
+
+      
+      
+      <!-- </view> -->
+    <!-- </swiper-item> -->
+  <!-- </block> -->
+<!-- </swiper> -->
+
+  <!-- <view class="header-nav">
+    <text>公司介绍</text>
+    <text>公司地址</text>
+    <text>意见反馈</text>
+  </view> -->
+  <view class="banner">
+    <image src="../../images/company1.png"></image>
+  </view>
+  <view class="about-us">
+    <view class="about-us-header">
+      <text class="firts-text">About us  </text>
+      <text class="second-text">关于我们</text>
+    </view>
+    <view class="about-us-text">
+      <text>成都市雅哲家居成立于2010年，雅哲家居以“诚信经营”、“精益求精”为生产理念，以“全心全意为消费者服务”作为企业宗旨，成为中国环保家具品牌，深受消费者信赖。
+        雅哲家居是来自瑞典的全球知名家具和家居零售商,互为和谐的产品系列在功能和风格上可谓种类繁多。无论你喜爱哪一种风格,都有为所有人提供的家居产品和解决方案,并以为大众创造更美好的日常生活为理念.欢迎来到创意家居世界,为您带来更多更低价格的产品。</text>
+    </view>
+  </view>
+  <view class="about-us">
+    <view class="about-us-header">
+      <text class="firts-text">Company shows  </text>
+      <text class="second-text">公司照片</text>
+    </view>
+    <view class="about-company-img">
+      <view class="company-img">
+        <image src="../../images/company2.png" mode="widthFix"></image>
+        <image src="../../images/company3.png" mode="widthFix"></image>
+      </view>
+      <view class="company-img">
+        <image src="../../images/company4.png" mode="widthFix"></image>
+        <image src="../../images/company6.png" mode="widthFix"></image>
+      </view>
+      <view class="company-img-list2">
+        <image src="../../images/company5.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="about-us">
+    <view class="about-us-header">
+      <text class="firts-text">About us  </text>
+      <text class="second-text">关于我们</text>
+    </view>
+    <view class="about-us-map">
+      <text>成都市高新区雅哲家居</text>
+      <map id="map" longitude="104.05 " latitude="30.65" scale="14" markers="{{markers}}" show-location style="width: 100%; height: 300px;"></map>
+    </view>
+  </view>
+  <button type="primary">立即拨打：028-888888888</button>
+</view>

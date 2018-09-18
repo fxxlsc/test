@@ -1,0 +1,17 @@
+unique1&&unique1({
+    "status": 0,
+    "message": "query ok",
+    "detail": {
+        "id": "100630Y2131231113425000",
+        "description": "",
+        "tags": [
+            "REGION"
+        ],
+        "location": {
+            "lat": 23.10007202241482,
+            "lng": 113.32455701924863
+        },
+        "pov_exp": 2,
+        "heading": 204
+    }
+})

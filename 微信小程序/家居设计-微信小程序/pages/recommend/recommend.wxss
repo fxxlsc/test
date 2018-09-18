@@ -1,0 +1,42 @@
+.box{
+  font-family: "微软雅黑"；
+}
+
+.banner image{
+  width: 100%;
+}
+.header .touxiang{
+  display: flex;
+  justify-content: space-around;
+  margin-top: -15%;
+} 
+.header .touxiang .tx-style{
+  flex-basis: 20%;
+  border-radius: 50%;
+  border: 2px solid white;
+ 
+}
+.header .touxiang .tx-style image{
+  width: 100%;
+}
+.touxiang .tx-text{
+  padding-top: 10%;
+}
+.desginer-messgae{
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: 	#696969;
+}
+.desginer-messgae text{
+  display: inline-block;
+  width: 80%;
+}
+.desginer-goods{
+  margin-top: 30px;
+}
+
+.desginer-goods image{
+  width: 100%;
+  margin: 30px 0;
+}

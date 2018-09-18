@@ -1,0 +1,69 @@
+<!--pages/good/good.wxml-->
+<!--pages/content/content.wxml-->
+<view class='container'>
+      <image class='tu' src='{{goodsimg}}'></image>
+	<view class='row'>
+		<view class='title'>
+			{{goodsname}}
+		</view>
+		<view class='time'>
+			新品上市
+		</view>
+		<view class='price'>
+			{{goodsprice}}
+		</view>
+		<view class='tip'>
+			限时特价
+		</view>
+	</view>
+  <view class='row'>
+		<view class='title'>
+			选择团队规模 : 
+		</view>
+		<view class='frow'>
+			<view class='tbox {{num==1?"tactive":""}}' data-num="1" bindtap='tset'>
+				单人
+			</view>
+			<view class='tbox {{num==2?"tactive":""}}' data-num="2" bindtap='tset'>
+				8人
+			</view>
+			<view class='tbox {{num==3?"tactive":""}}' data-num="3" bindtap='tset'>
+				12人
+			</view>
+		</view>
+	</view>
+	<view class='row'>
+		<view class='title1'>
+			<text>评论:</text>
+      <text bindtap='pinlun' class='fabiao'>发表评论</text>
+		</view>
+
+		<block wx:for='{{pinlun}}' wx:key='{{index}}'>
+      <view class='row frow prow'>
+			<image src='{{item.src}}' class='tou'/>
+			<view class='ptitle'>
+				{{item.name}}
+				<view class='title-ccc'>
+				{{item.time}}
+				</view>
+			</view>
+		</view>
+		<view class='txt'>
+				{{item.text}}
+		</view>
+    </block>
+
+	</view>
+	<view class='mb'></view>
+</view>
+<modal hidden="{{isshow}}" title="评论" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <textarea bindinput='pinluntext' placeholder='请输入评论'></textarea>
+</modal>
+<view>
+  <view class='go1'  bindtap='gocar'>
+	购买
+</view>
+<view class='go'  bindtap='goshouchang'>
+	收藏
+</view>
+</view>

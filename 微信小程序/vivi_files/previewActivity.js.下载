@@ -1,0 +1,396 @@
+define(function(require) {
+	var $ = require("jquery");
+	var justep = require("$UI/system/lib/justep");
+	require("./js/jquery.qrcode.min");
+	var IDEService = require("../common/IDEService");
+	var resourceTreeView = require("./view/menuTreeView");
+	var iframeIdx = 0;
+	var Model = function() {
+		this.callParent();
+	};
+
+	Model.prototype.modelLoad = function(event) {
+
+		this.path = this.getContext().getRequestParameter("path");
+		this.appPath = this.getContext().getRequestParameter("appPath");
+		this.config = JSON.parse(this.getContext().getRequestParameter("config"));
+		if(this.config){
+			this.device = this.config.ext.device;
+		}
+		this.iframeId = "frame_"+(iframeIdx++);
+		this.pageContainer = this.getElementByXid("pageManager");
+		this.designerContainer = this.getElementByXid("designerContent");
+		this.activityId = this.getContext().getRequestParameter("activityId");
+		this.screenSize = this.getContext().getRequestParameter("screenSize");
+		if(this.device == 'pc' ){
+			this.screenSize = "";
+		}
+//		this.activityId = this.getContext().getRequestParameter("AcivityId");
+
+		var self = this;
+	 
+		self.loadAppInfo();
+        self.refreshBarcode(); 
+        
+        // 设计区显示位置2016/12/1 thl
+		var marginTop = (parseInt($(window).height()) - parseInt($(".designer-content-wraper").height())) / 2;
+		if (marginTop < 0)
+			marginTop = 0;
+		$(".middleDiv").stop().animate({
+			"margin-top" : marginTop
+		});
+		$(window).resize(function() {// Metronic.addResizeHandler(function()
+			// {
+			var marginTop = (parseInt($(window).height()) - parseInt($(".designer-content-wraper").height())) / 2;
+			if (marginTop < 0)
+				marginTop = 0;
+			$(".middleDiv").stop().animate({
+				"margin-top" : marginTop
+			});
+			self.setScreenSize(self.screenSize);
+		});
+        this.setScreenSize(this.screenSize);
+        
+        $(window).on('message',function(event){
+			var data = event.originalEvent.data;
+			if(data == "refresh"){
+				var contentIframe = $(self.designerContainer).find('iframe').get(0);
+				if(contentIframe && contentIframe.contentWindow){
+					contentIframe.contentWindow.location.reload();
+				}
+			}
+		});
+		
+		if(this.isWX()){
+			$(this.getElementByXid("refreshApp")).removeClass("hide");
+			$(this.getElementByXid("reloadApp")).removeClass("hide");
+			$(this.getElementByXid("hintDiv")).show();
+		}
+		this.modifySystemError();
+	};
+	
+	/*手机屏幕大小设置 2017/02/13 lss*/
+	Model.prototype.setScreenSize = function(screenSize){
+		var $panel = $(this.getElementByXid('panel1'));
+		if(!screenSize){
+			$panel.addClass("designer-mode-pc"); 
+			$(this.getElementByXid('designerRight')).css("display","none");
+			var width = $panel.width()+50 - $(this.getElementByXid('designerLeft')).outerWidth();
+			$(this.getElementByXid('designerContainer')).width(width-15);//.height($panel.height() - 30 );
+			if(this.device == 'pc' || this.device == 'stb'){
+				$(this.getElementByXid('designerContainer')).height($panel.height() - 30 );
+			}
+			$(this.getElementByXid('designerContainer')).css("margin-left","15px");
+		}else{
+			var items = screenSize.split(","); 
+			var $panel = $(this.getElementByXid('panel1'));
+			var width = $panel.width() - 800;
+			var height = $panel.height() - 94;
+			var w = parseInt(items[0])+2;
+			var h1 = parseInt(items[1])+84;
+			var h2 = parseInt(items[1]);
+			var offsetH = h1 - height;
+			if(offsetH>0){
+				//h1 = height -20;
+			}
+			if(w>width){
+				//w = width;
+			}
+			if(this.device == 'm' ){
+				$panel.removeClass("designer-mode-pc");				
+			}else{
+				$panel.addClass("designer-mode-pc"); 
+			}
+			
+			$(this.getElementByXid('designerContainer')).width(w).height(h1); 
+	 
+			$(this.getElementByXid('designerContent')).css("height",h2);
+		}
+	}
+	
+	Model.prototype.refreshBarcode = function(){
+		var uiServerURL = location.origin;
+		this.comp('downdloadQR').set({
+			"value" : uiServerURL + require.toUrl("$UI/system/addones/loader/downloadAPP.w")
+		});
+	};
+    Model.prototype.openPage = function(filePath){
+    	var src = this.getFramePageUrl(filePath);
+    	var index = src.indexOf("#");
+    	if (index == -1){
+			$(this.getElementByXid("iframe1")).attr("src",src);
+    	}else{
+    		var hash = src.substring(index);
+			$(this.getElementByXid("iframe1"))[0].contentWindow.location.hash = hash;
+    	}
+		console.log(src);
+    };
+	
+	Model.prototype.getFramePageUrl = function(filePath){
+		this.filePath = filePath;
+		var host = window.location.href;
+		var xieyi = "http:";
+		if(host.indexOf("https:")!=-1){
+			xieyi = "https:"
+		}
+		var src;
+		if(this.isWX()){
+			this.filePath = this.filePath.replace("UI2","#");
+			src = xieyi+"//"+this.path+this.filePath;
+			src = src.replace(".w", "/"+new Date().getTime());
+		}else{
+			if (this.index == filePath){
+				var device = this.device;
+				if(device == "pc"){
+					device = 'pc';
+				}else if(device == "stb"){
+					device = 'stb&$skin=tv';
+				}else{
+					device = 'm';
+				}
+				src = xieyi+"//"+this.path+"/x5/"+this.filePath+"?device="+device+'&activityId='+this.activityId;
+			}else{
+				var src = $(this.getElementByXid("iframe1")).attr("src");
+				if (src.indexOf("#!") != -1){
+					src = src.substring(0, src.indexOf("#!"));
+				}
+				src += "#!($model/" + filePath + ")"; 
+			}
+		}
+		return src;
+	}
+	
+	// 初始化用户环境
+	Model.prototype.loadAppInfo = function() { 
+		this.currentDevice = this.device; 
+ 
+		var self = this;
+		IDEService.callService({
+			name : "getAppInfo",
+			params : {
+				isQuickIde : "true",
+				apptype : self.isWX()?self.config.apptype:(justep.Util.getGlobalValue("cloudx5.config")||{}).apptype || '1',
+				mainapptype : (justep.Util.getGlobalValue("cloudx5.config")||{}).mainapptype || '1',
+				extName : "w,html",
+				cfg : self.config,
+				appPath : self.appPath || ""
+			},
+			success : function(result) {
+				self.compConfig = result.componentConfig;
+				self.appPath = result.appPath;
+				/*-----------------------------------------------20160906 lss 左侧导航：获取返回参数中的menu列表  start -----------------------------------------------------------------*/
+				if (result.pageTree != undefined) {
+					var params = {
+							treeDom : $(self.getElementByXid("pageManager")),
+							data : $(result.pageTree.children[0]),
+							mainModel : self
+						};
+					self.resourceTreeView = new resourceTreeView(params);
+				}
+				/*-----------------------------------------------20160906 lss 左侧导航：获取返回参数中的menu列表   end ------------------------------------------------------------------*/
+				self.uiPath = result.uiPath;
+				self.modelPath = result.modelPath;
+				self.contextPath = result.contextPath;
+				
+				var filePath = self.appPath;
+				filePath += "/index.w"; //都使用index.w
+				if(self.isWX()){
+					filePath = self.appPath + "/index.w";
+				}
+				self.index = filePath;
+				var url = self.getFramePageUrl(filePath);
+				$(self.getElementByXid('phoneImg')).attr('src', require.toUrl("$UI/system/designer/webIde/quickIde/images/iphone5.png")); //设置背景图片
+				$(self.getElementByXid('phoneDiv')).css({"width":"322px","margin":"0 auto"}); //设置手机显示的位置居中
+				$(self.getElementByXid('phoneImg')).css("width","322px");//设置图片大小
+				//$(self.getElementByXid('screenDiv')).addClass('iphone5'); //内嵌页面显示的位置
+				/*通过二维码扫描app*/
+				$(".qrcode").qrcode({
+					render: "canvas", //table方式 
+					width: 120, //宽度 
+					height:120, //高度 
+					text: url //任意内容 
+				});
+				
+				if (self.isWX()){
+					//检查nodejs是否准备好
+					$.ajax({
+						type: "GET",
+						async: true,
+						url: url,
+						headers: {
+							"Health-Check-Reset": "true"
+						}, 
+						success: function(){
+							$(self.getElementByXid("iframe1")).attr("src",url);
+						}, 
+						error: function(){
+							$(self.getElementByXid("iframe1")).attr("src",url);
+						}
+					});
+				}else{
+					$(self.getElementByXid("iframe1")).attr("src",url);
+				}
+			}
+		});
+	};
+	
+	Model.prototype.refreshApp = function(){
+		this.getElementByXid("iframe1").contentWindow.location.reload();
+	};
+	
+	Model.prototype.refreshWxApp = function(){
+		if(this.isWX()){
+			var self = this;
+			try{
+				$.ajax(require.toUrl("$UI/system/designer/webIde/appMaker/service/stopUIXWebService.j?path=/" + this.appPath));
+				var toast = $('<div>预览服务正在重启中...</div>');
+				toast.css({
+					"text-align":"center",
+					"position":"fixed",
+					"top":"0",
+					"margin-left":"10%",
+					"width":"80%",
+					"left":"0",
+					"background-color":"#04be02",
+					"color":"white",
+					"z-index":"999",
+					"border-radius":"8px",
+				});
+				$(self.getElementByXid("iframe1").contentDocument.body).append(toast);
+				setTimeout(function(){
+					$.ajax(require.toUrl("$UI/system/designer/webIde/appMaker/service/startUIXWebService.j?path=/" + self.appPath));
+				},1000);
+				setTimeout(function(){
+					var url = $(self.getElementByXid("iframe1")).attr("src");
+					$.ajax({
+						type: "GET",
+						async: true,
+						url: url,
+						headers: {
+							"Health-Check-Reset": "true"
+						}, 
+						success: function(){
+							self.getElementByXid("iframe1").contentWindow.location.reload(true);
+						}, 
+						error: function(){
+							self.getElementByXid("iframe1").contentWindow.location.reload(true);
+						}
+					});
+				},5000);
+			}catch(e){
+				console.log("重启异常:" + e);
+				location.reload();
+			}
+		}
+	};
+	
+	Model.prototype.refreshAppMouseover = function(event){
+		var self = this;
+		this.startTime = new Date().getTime();
+		this.intervalID = window.setTimeout(function(){
+			$(self.getElementsByXid("domaintips")).show();
+		}, 200);
+		
+	};
+	
+	Model.prototype.refreshAppMouseout = function(event){
+		if(new Date().getTime() - this.startTime < 200){
+			window.clearTimeout(this.intervalID);
+			this.intervalID = null;
+		}
+		$(this.getElementsByXid("domaintips")).hide();
+	};
+	
+	//suppport wx
+	Model.prototype.isWX = function(){
+		var type = this.getContext().getRequestParameter("apptype");
+		if (!type && this.params) type = this.params.apptype;
+		if (!type && this.config) type = this.config.apptype;
+		
+		return "3" === type;	
+	};
+	
+	/**显示资源树**/
+	Model.prototype.showResourceTreeBtnClick = function(event){
+		$(event.target).closest(".ide-body").removeClass("ide-left-shousuo");
+		if(this.currentBottomContent){
+			this.currentBottomContent.show();
+		}
+		//设置designerContent的左右边距
+		var $panel = $(this.getElementByXid('panel1'));
+		//if(this.device == 'pc' ){ 
+			this.setScreenSize(this.screenSize);
+//		}else{
+//		self.setScreenSize(self.screenSize);
+//		}
+	};
+	
+	/**隐藏资源树**/
+	Model.prototype.hideResourceTreeBtnClick = function(event){
+		$(event.target).closest(".ide-body").addClass("ide-left-shousuo");
+		if(this.currentBottomContent){
+			this.currentBottomContent.hide();
+		}
+		//设置designerContent的左右边距
+		var device = this.device;
+		var $panel = $(this.getElementByXid('panel1'));
+//		if(this.device == 'pc' ){ 
+			this.setScreenSize(this.screenSize);
+//		}
+	};
+	
+	Model.prototype.modifySystemError = function(){
+		//接管iframe中的特殊异常
+		window.$throw406 = function(){
+			setTimeout(function(){
+				throw new Error("HTTP status: 406");	
+			})
+			
+		};
+		window.beforeOpenErrorDialog = function(info){
+			if (info){
+				var message = info.message || "";
+				if (message.indexOf("HTTP status: 406") != -1){
+					info.message = "您离开的太久，请刷新页面重新加载制作台并重新预览！";
+					info.ignoredDetail = true;
+					$(".modal-footer .x-error-close",document).text("立即刷新");
+					$(".modal-footer .x-error-close",document).on("click",function(){
+						window.location.reload();
+					})
+					return;					
+				}
+			}else{
+				$(".modal-footer .x-error-close",document).text("关闭");
+			}
+		}
+		
+		$(document).ajaxError( function(event, jqXHR, options, data){
+			if (jqXHR.status==406){
+				throw new Error("HTTP status: 406");
+			}
+		});
+	};
+
+	Model.prototype.iframe1Load = function(event){
+		setTimeout(function(){
+			var isError = false;
+			try {
+				isError = !event.currentTarget.contentWindow.justep && !event.currentTarget.contentWindow.wx
+			} catch (e) {
+				isError = false;
+			}
+			if (isError) {
+				throw new Error("HTTP status: 406");
+			}
+		}, 5000);
+	};
+	Model.prototype.a2Click = function(event){
+		this.comp('hintPopover').show()
+	};
+
+	Model.prototype.span2Click = function(event){
+		this.comp('hintPopover').hide()
+	};
+	return Model;
+});
+

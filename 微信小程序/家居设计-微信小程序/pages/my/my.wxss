@@ -1,0 +1,63 @@
+.box{
+  height: 600px;
+  background-color: rgba(0,0,0,.1);
+  font-family: "微软雅黑"；
+  
+}
+.bg{
+  background-color: 	#F8F8FF;
+}
+/* .userinfo{ */
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* background-image: url("../../images/top_bg.jpg"); */
+  /* width: 100%;
+  height: 150px; */
+  
+/* } */
+/* .userinfo  image{
+  flex-basis: 20%;
+  padding-top: 10%;
+
+} */
+/* .userinfo .user-Name{
+  flex-basis: 70%;
+  padding-top: 15%;
+  color: white;
+} */
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+.userInfoo .useInfo-style{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+}
+.userInfoo .useInfo-style image{
+  flex-basis: 6%;
+  margin: 10px 0;
+}
+.userInfoo .useInfo-style text{
+  flex-basis: 70%;
+  padding-top: 3%;
+}

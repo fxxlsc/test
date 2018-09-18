@@ -1,0 +1,17 @@
+<!--pages/allorders/allorders.wxml-->
+<view class='box1' wx:if='{{orderlist==""}}'>
+  <view><text>您还没有相关订单哦！</text>
+  <image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/Navi_购买.png'></image>
+  </view>
+</view>
+<view wx:else>
+  <block wx:key='{{index}}' wx:for='{{orderlist}}'>
+    <view class='box2'>
+      <text class='bianhao'>订单编号：<text>{{index+1}}</text></text>
+      <image data-index='{{index}}' bindtap='goods'  class='img' src='{{item.src}}'></image>
+      <text class='name'>名称：{{item.name}}</text>
+      <text class='price'>价格：{{item.price}}</text>
+      <text class='num'>参团人数：{{item.num}}</text>
+    </view>
+  </block>
+</view>

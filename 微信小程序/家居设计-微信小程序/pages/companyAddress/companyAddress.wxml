@@ -1,0 +1,13 @@
+<view class="box">
+ <view class="about-us">
+    <view class="about-us-header">
+      <text class="firts-text">Company address  </text>
+      <text class="second-text">公司地址</text>
+    </view>
+    <view class="about-us-map">
+      <text>成都市高新区雅哲家居</text>
+      <map id="map" longitude="104.05 " latitude="30.65" scale="14" markers="{{markers}}" show-location style="width: 100%; height: 300px;"></map>
+    </view>
+  </view>
+  <button type="primary">立即拨打：028-888888888</button>
+</view>

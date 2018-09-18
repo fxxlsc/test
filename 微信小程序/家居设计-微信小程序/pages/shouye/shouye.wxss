@@ -1,0 +1,110 @@
+.shouye{
+  background-color: #ccc;
+  font-family: "微软雅黑"；
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  height:240px;
+}
+ /* .banner image{
+  width: 100%;
+}  */
+.sectionone{
+  display: flex;
+  justify-content: space-around;
+  background-color: 	#F8F8FF;
+}
+.sectionone .sectionone-item{
+   flex-basis: 13%; 
+   margin-top: 20px;  
+   margin-bottom: 20px;
+}
+.sectionone .sectionone-item image{
+  width: 80%;
+  height: 80rpx;
+}
+.sectionone .sectionone-item .sectionone-item-text{
+  font-size: 12px;
+  /* text-align: center; */
+}
+
+.contentone{
+  margin-top: 15px;
+  background-color: 	#F8F8FF;
+}
+.content-text-one , .content-text-two{
+  color: 	#CD853F;
+}
+.contentone .content-item-one,.contentone .content-item-two{
+text-align: center;
+}
+.contentone .imgtext .content-img image{
+  width: 100%;
+}
+.imgtext{
+  position: relative;
+  line-height: 30px;
+}
+.imgtext .content-text{
+  margin-left: 2%;
+}
+.imgtext .content-text .text-one{
+  font-size: 16px;
+}
+.imgtext .content-text .text-two{
+    color: #ccc;
+    font-size: 14px;
+}
+.imgtext button{
+   margin-left: 2%;
+}
+.num{
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  width: 30%;
+  height: 20%;
+  border-left: 4px solid #CD853F;
+}
+.num .number{
+padding-left: 20%;
+}
+.contenttwo{
+  background-color: #F8F8FF;
+  margin-top: 15px ;
+}
+.content-item-o , .content-item-t{
+  text-align: center;
+  color: 	#CD853F;
+  
+}
+.content-item-t{
+  border-bottom: 1px solid #ccc;
+}
+.stylename{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.stylename image{
+  flex-basis: 30%;
+  
+}
+.stylename .style-text{
+  flex-basis: 58%;
+  font-size: 16px;
+  line-height: 24px;
+}
+.minpai{
+  background-color: 		#8B4513;
+  margin-left: 43%;
+  color: white;
+  border-radius: 5px;
+}
+.desgin-name{
+  font-weight: 600;
+}

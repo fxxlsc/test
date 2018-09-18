@@ -1,0 +1,29 @@
+ <view class="box">
+  <view class="header">
+    <view class="banner">
+      <image src="../../images/recommend1.png"></image>
+    </view>
+    <view class="touxiang">
+      <view class="tx-style">
+        <image src="{{src3}}" mode="widthFix"></image>
+      </view>
+      <view class="tx-text">
+        <text>[ 设计师介绍 ]</text>
+      </view>
+    </view>
+  </view>
+  <view class="desginer-messgae">
+    <text>
+   {{textW}}
+  </text>
+  </view>
+
+  <view class="desginer-goods">
+    <text class="title">[ 作品推荐 ]</text>
+    <image src="{{src1}}"></image>
+    <image src="{{src2}}"></image>
+  </view>
+
+  <view class="liuyan"></view>
+
+</view> 

@@ -1,0 +1,110 @@
+unique0&&unique0({
+    "status": 0,
+    "message": "query ok",
+    "request_id": "76a3f33a-a6a4-11e8-870e-6c0b84ffcd2a",
+    "result": {
+        "location": {
+            "lat": 23.099994,
+            "lng": 113.32452
+        },
+        "address": "广东省广州市海珠区新港中路397号",
+        "formatted_addresses": {
+            "recommend": "海珠区赤岗T.I.T创意园(艺苑路南)",
+            "rough": "海珠区赤岗T.I.T创意园(艺苑路南)"
+        },
+        "address_component": {
+            "nation": "中国",
+            "province": "广东省",
+            "city": "广州市",
+            "district": "海珠区",
+            "street": "新港中路",
+            "street_number": "新港中路397号"
+        },
+        "ad_info": {
+            "nation_code": "156",
+            "adcode": "440105",
+            "city_code": "156440100",
+            "name": "中国,广东省,广州市,海珠区",
+            "location": {
+                "lat": 23.099995,
+                "lng": 113.324516
+            },
+            "nation": "中国",
+            "province": "广东省",
+            "city": "广州市",
+            "district": "海珠区"
+        },
+        "address_reference": {
+            "business_area": {
+                "id": "2679102789550683041",
+                "title": "赤岗",
+                "location": {
+                    "lat": 23.099995,
+                    "lng": 113.324516
+                },
+                "_distance": 0,
+                "_dir_desc": "内"
+            },
+            "famous_area": {
+                "id": "2679102789550683041",
+                "title": "赤岗",
+                "location": {
+                    "lat": 23.099995,
+                    "lng": 113.324516
+                },
+                "_distance": 0,
+                "_dir_desc": "内"
+            },
+            "crossroad": {
+                "id": "10985902",
+                "title": "创意大道/创意北路(路口)",
+                "location": {
+                    "lat": 23.099251,
+                    "lng": 113.325073
+                },
+                "_distance": 95,
+                "_dir_desc": "西北"
+            },
+            "town": {
+                "id": "440105001",
+                "title": "赤岗街道",
+                "location": {
+                    "lat": 23.099995,
+                    "lng": 113.324516
+                },
+                "_distance": 0,
+                "_dir_desc": "内"
+            },
+            "street_number": {
+                "id": "11071560098269520201",
+                "title": "新港中路397号",
+                "location": {
+                    "lat": 23.1001,
+                    "lng": 113.324562
+                },
+                "_distance": 12.6,
+                "_dir_desc": ""
+            },
+            "street": {
+                "id": "8987269482697616724",
+                "title": "艺苑路",
+                "location": {
+                    "lat": 23.100393,
+                    "lng": 113.324196
+                },
+                "_distance": 49.6,
+                "_dir_desc": "南"
+            },
+            "landmark_l2": {
+                "id": "12810183469461025708",
+                "title": "T.I.T创意园",
+                "location": {
+                    "lat": 23.098549,
+                    "lng": 113.323761
+                },
+                "_distance": 0,
+                "_dir_desc": "内"
+            }
+        }
+    }
+})

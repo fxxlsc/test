@@ -1,0 +1,48 @@
+{
+  "pages": [
+        "pages/shopindex/shopindex",
+        "pages/allorders/allorders",
+
+    "pages/good/good",
+    "pages/personal/personal",
+    "pages/goumai/goumai",
+    "pages/shouchang/shouchang",
+    "pages/allgoods/allgoods",
+    "pages/cun/cun",
+    "pages/xia/xia",
+    "pages/qiu/qiu",
+    "pages/dong/dong",
+    "pages/index/index",
+    "pages/logs/logs"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "春晓户外",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#33CCFF",
+    "list": [
+      {
+        "pagePath": "pages/shopindex/shopindex",
+        "text": "首页",
+        "iconPath": "images/index2.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/allgoods/allgoods",
+        "text": "全部商品",
+        "iconPath": "images/goods2.png",
+        "selectedIconPath": "images/goods.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal2.png"
+      }
+    ]
+  }
+}

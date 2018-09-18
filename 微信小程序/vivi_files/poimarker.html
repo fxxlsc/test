@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!-- saved from url=(0175)https://3gimg.qq.com/lightmap/v1/marker/index.html?type=0&marker=coord%3A23.099994%2C113.324520%3Btitle%3A%3Baddr%3A&key=JMRBZ-R4HCD-X674O-PXLN4-B7CLH-42BSB&referer=wxdevtools -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var StatTimer = window.StatTimer = {
+            _s: new Date().getTime(),
+            data: {},
+            stub: function(name) {
+                this['data'][name] = (new Date().getTime() - this._s) / 1000;
+            }
+        };</script><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1"><meta name="format-detection" content="address=no"><link rel="stylesheet" href="./icon2.css"><title>腾讯地图</title><style>html,body{margin:0;padding:0;height:100%;font-size:12px;font-family:SimHei}ul,li{list-style:none;margin:0;padding:0}.hidden{display:none}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="QQMapAPI" src="./js"></script><style>.page-error {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.page-error .icon {
+	background: url(images/i.png) no-repeat;
+	width: 55px;
+	height: 55px;
+	background-size: 100%;
+	margin: 0 auto 20px auto;
+}
+
+.page-error .center {
+	width: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -125px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: #54585e;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+}
+</style><style>.common-widget-loading {
+  z-index: 10000;
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+}
+@-webkit-keyframes loading-anim {
+  0% {
+  -webkit-transform: rotate(0deg);
+}
+100% {
+  -webkit-transform: rotate(360deg);
+}
+
+}
+.common-widget-loading .loading {
+  -webkit-animation: loading-anim 1000ms linear infinite;
+  width: 0px;
+  position: absolute;
+  background-color: #aaa;
+}
+.common-widget-loading .loading li {
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #54585e;
+  transform-origin: 0% 50%;
+  -webkit-transform-origin: 0% 50%;
+  transform: rotate(0deg) translate(15px, 0px);
+  -webkit-transform: rotate(0deg) translate(15px, 0px);
+}
+.common-widget-loading .loading li:nth-child(2) {
+  transform: rotate(-30deg) translate(15px, 0px);
+  -webkit-transform: rotate(-30deg) translate(15px, 0px);
+  opacity: 0.95;
+}
+.common-widget-loading .loading li:nth-child(3) {
+  transform: rotate(-60deg) translate(15px, 0px);
+  -webkit-transform: rotate(-60deg) translate(15px, 0px);
+  opacity: 0.85;
+}
+.common-widget-loading .loading li:nth-child(4) {
+  transform: rotate(-90deg) translate(15px, 0px);
+  -webkit-transform: rotate(-90deg) translate(15px, 0px);
+  opacity: 0.75;
+}
+.common-widget-loading .loading li:nth-child(5) {
+  transform: rotate(-120deg) translate(15px, 0px);
+  -webkit-transform: rotate(-120deg) translate(15px, 0px);
+  opacity: 0.65;
+}
+.common-widget-loading .loading li:nth-child(6) {
+  transform: rotate(-150deg) translate(15px, 0px);
+  -webkit-transform: rotate(-150deg) translate(15px, 0px);
+  opacity: 0.55;
+}
+.common-widget-loading .loading li:nth-child(7) {
+  transform: rotate(-180deg) translate(15px, 0px);
+  -webkit-transform: rotate(-180deg) translate(15px, 0px);
+  opacity: 0.45;
+}
+.common-widget-loading .loading li:nth-child(8) {
+  transform: rotate(-210deg) translate(15px, 0px);
+  -webkit-transform: rotate(-210deg) translate(15px, 0px);
+  opacity: 0.35;
+}
+.common-widget-loading .loading li:nth-child(9) {
+  transform: rotate(-240deg) translate(15px, 0px);
+  -webkit-transform: rotate(-240deg) translate(15px, 0px);
+  opacity: 0.25;
+}
+.common-widget-loading .loading li:nth-child(10) {
+  transform: rotate(-270deg) translate(15px, 0px);
+  -webkit-transform: rotate(-270deg) translate(15px, 0px);
+  opacity: 0.15;
+}
+.common-widget-loading .loading li:nth-child(11) {
+  transform: rotate(-300deg) translate(15px, 0px);
+  -webkit-transform: rotate(-300deg) translate(15px, 0px);
+  opacity: 0.05;
+}
+.common-widget-loading .loading li:nth-child(12) {
+  transform: rotate(-360deg) translate(15px, 0px);
+  -webkit-transform: rotate(-360deg) translate(15px, 0px);
+  opacity: 0;
+}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://3gimg.qq.com/lightmap/api_v2/2/4/99/main.js" src="./main.js(1).下载"></script><style>a, i {
+    -webkit-tap-highlight-color:transparent;
+}
+
+.poiresultinfowindow:after,
+.poiresultinfowindow:before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin-left: -7px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 7px;
+  border-bottom-width: 0;
+  z-index: 10;
+}
+.poiresultinfowindow:before {
+  border-top-color: #d1d1d1;
+  margin-bottom: -7px;
+}
+.poiresultinfowindow:after {
+  border-top-color: white;
+  margin-bottom: -6px;
+}
+.poiresultinfowindow .tonav {
+  display: block;
+  position: absolute;
+  top: 13px;
+  width: 75px;
+  height: 34px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 21px;
+  border-radius: 4px;
+  background-color: #0079ff;
+}
+.poiresultinfowindow .tonav i {
+  background:url(images/arrow.png) no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: 3px;
+  width: 21px;
+  height: 21px;
+}
+.poiresultinfowindow .tonav span {
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  right: 6px;
+  height: 18px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+}
+.poiresultinfowindow .tonav {
+  right: 12px;
+}
+.poiresultinfowindow .hide {
+  display: none;
+}
+.poiresultinfowindow .topoidet {
+  display: block;
+  padding: 8px 10px;
+  padding-right: 0;
+}
+.poiresultinfowindow .topoidet .det-title,
+.poiresultinfowindow .topoidet .det-addr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.poiresultinfowindow .topoidet .det-title {
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  color: #0079ff;
+  font-weight: bold;
+}
+.poiresultinfowindow .topoidet .det-addr {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8a8d8f;
+}
+.poiresultinfowindow .icon-maker {
+  width: 26px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -13px;
+  margin-bottom: -36px;
+}
+.poiresultmaker {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -9px;
+  margin-top: -9px;
+  border-radius: 16px;
+  background-color: #ff3f3f;
+  border: 1px solid white;
+  font-size: 9px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+</style><script src="./v1"></script><style>/* #common-widget-map {
+  /*background: #f6f6f6;*/
+  /*position: absolute;
+  width: 100%;
+  height: 100%;*/
+/* } */ */
+#common-widget-map #map-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#map-my-position-marker {
+  display: none;
+  position: absolute;
+}
+#map-my-position-marker .round-mask {
+  display: none;
+  position: absolute;
+  /*left: -15px;
+  top: -15px;*/
+  /*width: 30px;
+  height: 30px;*/
+  width: 27px;
+  height: 27px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(102,158,255,0.12);
+}
+#common-widget-map #map-my-position-marker .icon-my-pos-dir,
+#common-widget-map #map-my-position-marker .icon-my-pos {
+  position: absolute;
+  left: -11.5px;
+  top: -13.5px;
+}
+#common-widget-map .ctrl-layer .to-bottom {
+position: absolute;
+  top: -52px;
+  width: 100%;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl {
+  position: relative;
+  font-size: 0;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #btn-positioning,
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #map-info {
+  display: inline-block;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #btn-positioning {
+  vertical-align: bottom;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #map-info {
+  vertical-align: 2px;
+  margin-left: 18px;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl .to-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl .to-right &gt;a {
+  display: block;
+}
+#common-widget-map .ctrl-layer a.cbutton,
+#common-widget-map .ctrl-layer #map-info {
+  margin: 8px;
+}
+#common-widget-map .ctrl-layer #foot-external-content {
+  position: relative;
+}
+#common-widget-map .ctrl-layer a.cbutton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /*border-radius: 34px;*/
+  border-radius: 72px;
+  /* background-color: rgba(255,255,255,0.95);
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  border: solid 1px #bababa; */
+  overflow: hidden;
+  display: block;
+}
+#common-widget-map .ctrl-layer a.cbutton i {
+  display: block;
+}
+#common-widget-map .ctrl-layer a.cbutton i:after {
+    content: '';
+    background: url(images/pos.png);
+    background-size: 100%;
+  display: inline-block;
+  font-size: 42px;
+  width: 52px;
+  height: 52px;
+  z-index: -1;
+}
+#common-widget-map .ctrl-layer a.cbutton i.highlight:before {
+  color: #0079ff;
+}
+#common-widget-map .ctrl-layer a.cbutton .highlightCover {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+}
+#common-widget-map .ctrl-layer a.cbutton .highlightCover:active {
+    background: url(images/posa.png);
+    background-size: 100%;
+}
+/* #common-widget-map .ctrl-layer a.cbutton i:active {
+    background: url(images/posa.png);
+    background-size: 100%;
+    display: inline-block;
+    font-size: 42px;
+    width: 52px;
+    height: 52px;
+} */
+#common-widget-map .ctrl-layer .icon-traffic-light:active {
+  border-radius: 34px;
+}
+#common-widget-map .ctrl-layer #btn-traffic {
+  position: absolute;
+  right: 0;
+  /*top: 45px;*/
+  bottom: 130px;
+}
+#common-widget-map #btn-zoom i:before {
+  padding: 10px 5px;
+}
+#common-widget-map #btn-zoom i#btn-zoom-in:before {
+  padding-bottom: 20px;
+}
+#common-widget-map #btn-zoom i#btn-zoom-out:before {
+  padding-top: 20px;
+}
+#common-widget-map #btn-index-menu {
+  display: none;
+}
+#common-widget-map #map-info .scale,
+/*#common-widget-map #map-info .qqmap-text-logo {
+  text-shadow: #fff 0 -1px, #fff 1px 0, #fff 0 1px, #fff -1px 0;
+}*/
+#common-widget-map #map-info .scale {
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+  line-height: 1;
+  white-space: nowrap;
+  padding-bottom: 3px;
+  margin-bottom: 7px;
+}
+#common-widget-map #map-info .scale:before,
+#common-widget-map #map-info .scale:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 3px;
+  border-top: none;
+}
+#common-widget-map #map-info .scale:before {
+  left: -1px;
+  right: -1px;
+  bottom: -3px;
+  border: 3px #fff solid;
+  border-top: 0;
+}
+#common-widget-map #map-info .scale:after {
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  border: 1px #000 solid;
+  border-top: 0;
+}
+#common-widget-map #map-info .qqmap-text-logo {
+  font-family: icon;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.6);
+}
+#common-widget-map.covered {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+#common-widget-map.covered .ctrl-layer {
+  display: none;
+}
+.qqmap-text-logo-new {
+    background: url(images/logo.png) no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 14px;
+    position: absolute;
+}
+
+.bing-text-logo {
+  background: url(http://dev.virtualearth.net/Branding/logo_powered_by.png) no-repeat 0 50%;
+  width: 60px;
+  height: 20px;
+  display: none;
+  /* position: relative; */
+  left: -4px;
+}
+
+.here-text-logo {
+  background: url(https://wecar.myapp.com/myapp/mapwecar/HERE_Logo_black.png) no-repeat 0 50%;
+  width: 120px;
+  height: 80px;
+  display: none;
+  position: absolute;
+  transform: scale(0.33);
+  left: -8px;
+  top: -1px;
+}
+
+.changeBottom {
+  transform: translateY(-66px);
+}
+
+.downloadContainer .downloadBtn{
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  display: inline-block;
+  background: url(data:image/png;base64,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) no-repeat center center;
+  background-size: 52px 52px;
+  width: 43px;
+  height: 45px;
+  margin: 13px;
+}
+.downloadContainer .downloadBtnCover{
+  display: inline-block;
+  position: absolute;
+  right: 1px;
+  bottom: 56px;
+  width: 42px;
+  height: 42px;
+  margin: 13px;
+  border-radius: 21px;
+  -webkit-border-radius: 21px;
+}
+.downloadContainer .downloadBtnCover:active{
+    background: rgba(0, 0, 0, 0.1);
+}
+.downloadContainer .downloadInfo{
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  bottom: 65px;
+  width: 141px;
+  height: 38px;
+  background-color: rgba(72,117,253,0.9);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.downloadContainer .downloadInfo .downloadInfoNote{
+  color: #ffffff;
+  display: inline-block;
+  width: 76%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+  line-height: 38px;
+}
+.downloadContainer .downloadInfo .downloadInfoClose{
+  background: url(data:image/png;base64,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) no-repeat center center;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+}
+.downloadContainer .downloadInfo .downloadInfoCloseContainer{
+  display: inline-block;
+  width: 24%;
+  height: 100%;
+}
+.downloadContainer .downloadInfo .downloadInfoTriangle{
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid rgba(72,117,253,0.9);
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.poi-info {
+    z-index: 1000001;
+    background: #ffffff;
+}
+.poi-info .poi-title {
+    width: 100%;
+    padding: 19px 16px 17px 18px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.10);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
+.poi-info .poi-name {
+    font-size: 17px;
+    color: #111111;
+    display: block;
+    margin-right: 70px;
+    word-wrap: break-word;
+}
+.poi-info .poi-addr {
+    font-size: 13px;
+    color: #666666;
+    display: block;
+    margin-top: 4px;
+    margin-right: 70px;
+    word-wrap: break-word;
+}
+.poi-info .tonav {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -52.5px;
+    right: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+}
+.poi-info .tonav i, .poi-info .tonav .tonavCover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 60px;
+}
+.poi-info .tonav i {
+    background:url(images/arrow_1.png) no-repeat;
+    background-size: 100%;
+}
+/* .poi-info .tonav .tonavCover {
+} */
+.poi-info .tonav .tonavCover:active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.poi-info .poi-tab {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.poi-info .poi-tab a {
+    display: table-cell;
+    position: relative;
+    padding: 11px;
+    font-size: 14px;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+}
+.poi-info .poi-tab a:active {
+    background: rgba(0, 0, 0, 0.1);
+}
+.poi-info .poi-tab a i {
+    margin-right: 5px;
+}
+.icon-detail:before {
+    content: '';
+    background: url(images/i_1.png) no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+.icon-nearby:before {
+    content: '';
+    background: url(images/nearby.png) no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+</style><style>.page-marker {
+	width: 100%;
+	height: 100%;
+}
+.page-marker .map{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+.page-marker .tempel{
+	position: absolute;
+	top: 0;
+	/*bottom: 100px;*/
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.page-marker .dt {
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+}
+</style><style>.pageCt {width: 100%;height: 100%;-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}</style><script src="./getpano"></script><style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style></head><body><div id="page_container"><div class="pageCt"><div class="page-marker"><div class="tempel"><div class="map" style="background-color: rgb(229, 227, 223); overflow: hidden; transform: translateZ(0px);"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div n="targetElement" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div n="moveElement" style="position: absolute; left: 0px; top: 0px; z-index: 1; cursor: url(&quot;https://3gimg.qq.com/lightmap/api_v2/2/4/99/theme/grab.cur&quot;) 10 10, default; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 200;"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101;"></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 201;"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103;"></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 202;"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104;"></div><div draggable="false" style="transform: translateZ(0px); position: absolute; left: -377px; top: -200px; z-index: 105; background-color: transparent; background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAQAIBRAA7&quot;); margin: 0px; padding: 0px; user-select: none; width: 1131px; height: 600px;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; cursor: default;"><div title="" style="position: absolute; left: 176px; top: 68px; width: 26px; height: 36px; border: 0px none; overflow: hidden; transform-origin: 13px 32px 0px; transform: rotate(0deg); z-index: 0; cursor: pointer;"><img draggable="false" class="csssprite" dn="2" style="position: absolute; border: 0px; padding: 0px; margin: 0px; top: 0px; left: 0px; user-select: none; width: 26px; height: 36px; min-width: 26px; max-width: 26px; min-height: 36px; max-height: 36px;" src="./poi_3.png"></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; cursor: default;"></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 99;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="position: absolute; left: 176px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="position: absolute; left: -80px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="position: absolute; left: -80px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="position: absolute; left: 432px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="position: absolute; left: 432px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="position: absolute; left: 176px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="transform: translateZ(0px); position: absolute; left: 176px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="transform: translateZ(0px); position: absolute; left: -80px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="transform: translateZ(0px); position: absolute; left: -80px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="transform: translateZ(0px); position: absolute; left: 432px; top: -155px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="transform: translateZ(0px); position: absolute; left: 432px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div><div style="transform: translateZ(0px); position: absolute; left: 176px; top: 101px; transition: opacity 200ms ease-out 0s;"><canvas width="256" height="256" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; background: rgb(247, 245, 245); user-select: none; transform: translateZ(0px); padding: 0px; margin: 0px; border: 0px;"></canvas></div></div></div></div></div><div onpositionupdate="return;" style="position: absolute; z-index: 1000000; margin: 2px 5px 0px 2px; left: 0px; bottom: 0px;"><a title="到腾讯地图查看此区域" target="_blank" href="https://map.qq.com/?center=113.32452%2C23.099994&amp;l=15" style="position: static; overflow: visible; float: none; display: inline;"><div style="cursor: pointer; position: relative; overflow: hidden; width: 100px; height: 26px;"><img draggable="false" class="csssprite" dn="2" style="position: absolute; border: 0px; padding: 0px; margin: 0px; top: 0px; left: 0px; user-select: none; width: 100px; height: 26px; min-width: 100px; max-width: 100px; min-height: 26px; max-height: 26px;" src="./tencent_color_logo.png"></div></a></div><div draggable="false" onresize="return;" style="position: absolute; z-index: 1000000; user-select: none; left: 107px; bottom: 0px;"><div style="position: absolute; width: 100%; height: 100%; opacity: 0.7;"><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="font-family: Arial, sans-serif; white-space: nowrap; font-size: 10px; color: rgb(34, 34, 34); line-height: 16px; direction: ltr; text-align: right; font-weight: normal; font-style: normal; background-color: transparent; position: relative; padding: 0px 5px;"><span style="font-family: Arial, sans-serif; white-space: nowrap; font-size: 10px; color: rgb(34, 34, 34); line-height: 16px; direction: ltr; text-align: right; font-weight: normal; font-style: normal; background-color: transparent; display: none;">©2018 Tencent - GS(2018)2236号 - Data© NavInfo</span><a style="font-family: Arial, sans-serif; white-space: nowrap; font-size: 10px; color: rgb(34, 34, 34); line-height: 16px; direction: ltr; text-align: right; font-weight: normal; font-style: normal; background-color: transparent; text-decoration: underline; cursor: pointer;">地图数据</a></div></div><div draggable="false" class="smnoprint" controlwidth="64" controlheight="69" style="user-select: none; position: absolute; left: 0px; top: 0px;" onpositionupdate="return;"><div onresize="return;" style="position: absolute; left: 0px; top: 0px;"><div><div style="position: relative; margin-bottom: 0px; margin-top: 5px; width: 64px; height: 64px;"><div style="position: absolute; z-index: 0; width: 64px; height: 64px; overflow: hidden;"><img draggable="false" class="csssprite" dn="2" style="position: absolute; border: 0px; padding: 0px; margin: 0px; top: -58px; left: -230px; user-select: none; width: 360px; height: 255px; min-width: 360px; max-width: 360px; min-height: 255px; max-height: 255px;" src="./ctrls.png"><div title="向左平移" style="left: 0px; top: 21.3333px; width: 21px; height: 21px; position: absolute; z-index: 100; cursor: pointer;"></div><div title="向右平移" style="left: 42.6667px; top: 21.3333px; width: 21px; height: 21px; position: absolute; z-index: 100; cursor: pointer;"></div><div title="向上平移" style="left: 21.3333px; top: 0px; width: 21px; height: 21px; position: absolute; z-index: 100; cursor: pointer;"></div><div title="向下平移" style="left: 21.3333px; top: 42.6667px; width: 21px; height: 21px; position: absolute; z-index: 100; cursor: pointer;"></div></div></div></div></div></div></div></div><div class="tools"><div id="common-widget-map" class="">
+    <!-- <div id="map-container"></div> -->
+
+    <div id="map-my-position-marker">
+        <div class="round-mask"></div>
+        <i class="icon-my-pos-dir"></i>
+
+        <div class="poiresultinfowindow" style="display:none">
+            <a class="tonear"><i class="icon-nearby"></i></a>
+            <a class="topoidet" href="https://3gimg.qq.com/lightmap/v1/marker/%7B%7BCONFIG.rootpath%7D%7D/detail/bubble/">
+                <span class="det-title">我的位置</span>
+                <span class="det-addr"></span>
+            </a>
+            <a class="tonav" href="https://3gimg.qq.com/lightmap/v1/marker/%7B%7BCONFIG.rootpath%7D%7D/index/nav"><i class="icon-nav"></i></a>
+        </div>
+
+    </div>
+
+    <div class="ctrl-layer">
+        <!-- <a class="cbutton" id="btn-traffic" data-adtag="traffic"><i class="icon-traffic-light"></i></a> -->
+<footer>
+    <div class="to-bottom">
+        <div class="bottom-ctrl">
+
+            <!-- 1 定位按钮：左下角 -->
+            <a class="cbutton" id="btn-positioning" data-adtag="positioning">
+                <i class="icon-positioning highlight"></i>
+                <span class="highlightCover"></span>
+            </a>
+            <!-- 2 比例尺+logo -->
+            <div id="map-info">
+                <div class="scale" style="width: 45.5137px;">200 米</div>
+                <!-- <div class="qqmap-text-logo">腾讯地图</div> -->
+                <div class="qqmap-text-logo-new" style="display: block;"></div>
+                <div class="bing-text-logo">腾讯地图</div>
+                <div class="here-text-logo" style="display: none;">腾讯地图</div>
+            </div>
+            <!-- 3 右侧 -->
+            <!--<div class="to-right">-->
+                <!-- 缩放按钮 -->
+                <!--<a class="cbutton" id="btn-zoom">
+                    <i id="btn-zoom-in" class="icon-zoom-in" data-adtag="zoomin"></i>
+                    <i id="btn-zoom-out" class="icon-zoom-out" data-adtag="zoomout"></i>
+                </a>-->
+                <!-- 弹出菜单-->
+                <!--<a class="cbutton" id="btn-index-menu" data-adtag="more"><i class="icon-more"></i></a>
+            </div>-->
+            <div class="downloadContainer">
+                <span class="downloadBtnContainer">
+                    <span class="downloadBtn"></span>
+                    <span class="downloadBtnCover"></span>
+                </span>
+                <!-- <span class="downloadInfo">
+                    <span class="downloadInfoCloseContainer"><i class="downloadInfoClose"></i></span>
+                    <span class="downloadInfoNote">无需流量用地图</span>
+                    <i class="downloadInfoTriangle"></i>
+                </span> -->
+            </div>
+        </div>
+        <div id="map-widget-foot-external-content"></div>
+    </div>
+    <div class="poi-info">
+        <div class="poi-title"><span class="poi-name">新港中路</span><span class="poi-addr">广东省广州市海珠区新港中路397号</span>
+            <div class="actTonav tonav">
+                <i data-adtag="poitonav"></i>
+                <span class="tonavCover"></span>
+            </div>
+        </div>
+        <div class="poi-tab"><a href="javascript:;" class="actNearby" data-adtag="poinearby"><i class="icon-nearby"></i>查看周边</a></div>
+    </div>
+
+</footer>
+
+    </div>
+
+
+</div>
+</div></div><div class="dt"></div></div></div></div><script type="text/javascript">window.__start = +new Date();
+        var userKey;
+        //元素是否含有某样式
+        function hasClass(element,className){
+            return !!element.className.match(new RegExp('(\\s|^)'+className+'(\\s|$)'));
+        }
+        //向元素添加新样式
+        function addClass(element,className){
+             if(hasClass(element,className) == false){
+                element.className += ' '+className;
+              }
+         }
+        //移除元素的指定样式
+        function removeClass(element,className){
+            var currentClass = element.className;
+             if(hasClass(element,className)){
+                 currentClass = currentClass.replace(new RegExp('(\\s|^)'+className+'(\\s|$)'),' ');
+                    //去除空格
+                currentClass = currentClass.replace(/(^\s*)|(\s*$)/g,'');
+                element.className = currentClass;
+            }
+        }
+        function toggleClass(element,className){  
+            if(hasClass(element,className)){  
+                removeClass(element,className);  
+            }else{  
+                addClass(element,className);  
+            }  
+        }
+        (function(){
+            var attrSplit = ';';
+            var keySplit = ':';
+            var utildecode = {
+                listAna : function(str) {
+                    if (typeof str !== 'string' || !str) {
+                        return;
+                    }
+                    var arr = str.split(attrSplit);
+                    var obj = {};
+                    var attr;
+                    for (var i = 0, l = arr.length; i < l; i++) {
+                        attr = arr[i].split(keySplit);
+                        obj[attr[0]] = attr[1];
+                    }
+                    return obj;
+
+                },
+                decodeUrlParams: function(str) {
+                    if (str.trim() === '') {
+                        return {};
+                    }
+                    var parts = str.split('&');
+                    var paramObj = {};
+                    for (var i = 0, l = parts.length; i < l; i++) {
+                        var keyValueAr = parts[i].split('=');
+                        paramObj[keyValueAr[0]] = decodeURIComponent(keyValueAr[1] || '');
+                    }
+                    return paramObj;
+                }
+
+            };
+            try {
+                var params = utildecode.decodeUrlParams(location.search.slice(1));
+                var markerObj = utildecode.listAna(params.marker);
+                document.title = markerObj.title || '腾讯地图';
+            } catch(e) {
+                document.title = '腾讯地图';
+            }
+            
+        })();
+
+        function filterXSS(e) {
+                if (!e) return e;
+
+                for (; e != unescape(e);) e = unescape(e);
+
+                for (var r = ["<", ">", "'", '"', "%3c", "%3e", "%27", "%22", "%253c", "%253e", "%2527", "%2522", "javascript", "java", "script", "\\balert\\s*\\\(.*?\\\)", "\\bconfirm\\s*\\\(.*?\\\)", "\\bprompt\\s*\\\(.*?\\\)", "\\bjavascript\\b", "\\bjavascript\\b", "\\bjavascript\\b", "document\\.write", "\\beval\\b", "\\batob\\b"],
+                    n = ["&#x3c;", "&#x3e;", "&#x27;", "&#x22;", "%26%23x3c%3B", "%26%23x3e%3B", "%26%23x27%3B", "%26%23x22%3B", "%2526%2523x3c%253B", "%2526%2523x3e%253B", "%2526%2523x27%253B", "%2526%2523x22%253B", "", "", "", "", "", "", "", "", "", "", "", ""],
+                    a = 0;
+                    a < r.length; a++) {
+                    e = e.replace(new RegExp(r[a], "gi"), n[a]);
+                }
+
+                return e;
+            };
+
+        (function() {       //获取key
+            var query = location.search.slice(1),
+                defaultkey = 'VFUBZ-JIR3D-Z2M4H-PPAGG-G5KVQ-S3F2S',
+                key = defaultkey;
+            if(query.trim() === '') {
+                userKey = defaultkey;
+                return;
+            }
+            var splitArr = query.split('&');
+            for (var i = 0, l = splitArr.length; i < l; i++) {
+                var keyValueAr = splitArr[i].split('=');
+                if(keyValueAr[0] == 'key') {
+                    key = keyValueAr[1] || defaultkey;
+                }
+            }
+            key = filterXSS(key) || defaultkey;
+            userKey = key;
+        })()</script><script type="text/javascript" src="./require.js.下载"></script><script type="text/javascript" data-cmd="md5" src="./groupActivity-781bdd2ffa6619aa0a4c177f1f98f182.js.下载"></script><script type="text/javascript" src="./geolocation.min.js.下载"></script></body></html>

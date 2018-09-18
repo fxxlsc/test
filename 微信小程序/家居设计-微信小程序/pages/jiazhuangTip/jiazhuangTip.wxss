@@ -1,0 +1,27 @@
+.box{
+  font-family: "微软雅黑"；
+}
+.header,.tip-text{
+  margin: 0 10px;
+  line-height: 24px;
+}
+.header .title{
+  font-size: 24px;
+  font-weight: bold;
+}
+.header .tip{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.header .date{
+  font-size: 14px;
+  color: 	#C0C0C0;
+}
+.tip-text{
+  text-align: center;
+  font-size: 14px;
+}
+.tip-text  image{
+  margin: 20px 0  40px;
+}

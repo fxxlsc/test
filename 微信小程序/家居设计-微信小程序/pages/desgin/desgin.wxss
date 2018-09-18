@@ -1,0 +1,22 @@
+.renwu .touxiang{
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-around;
+}
+.renwu .touxiang .name .job{
+  margin-top: 20px;
+}
+.renwu .touxiang image{
+  flex-basis: 20%;
+}
+.desgin-product .desgin-img{
+display: flex;
+justify-content: space-around;
+margin: 10px 0;
+
+}
+.desgin-product .desgin-img image{
+  flex-basis: 30%;
+}

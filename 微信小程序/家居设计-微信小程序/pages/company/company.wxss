@@ -1,0 +1,77 @@
+.box{
+  font-family: "微软雅黑"；
+}
+
+.titles {
+  height: 36px;
+  width: 100%;
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-selected {
+  border-bottom: 2px solid 	#8B4513;
+  color: 	#8B4513;
+}
+/* .page {
+
+
+
+
+} */
+.banner image{
+  width: 100%;
+}
+.header-nav{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.about-us{
+  margin:10px 2%;
+}
+.about-us .about-us-header .firts-text{
+  color: 	#A0522D;
+  font-size: 24px;
+  font-weight: bold;
+}
+.about-us .about-us-header .second-text{
+  color: 	#696969;
+  border-bottom: 1px solid #ccc;
+}
+.about-us-text{
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+
+.about-company-img{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.company-img{
+  flex-basis: 25%;
+}
+.company-img image{
+  width: 100%;
+}
+.company-img-list2{
+  flex-basis: 40%;
+}
+.company-img-list2 image{
+  width: 100%;
+  
+}
+.about-us-map {
+ margin: 20px 0;
+}

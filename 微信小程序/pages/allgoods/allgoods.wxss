@@ -1,0 +1,27 @@
+/* pages/allgoods/allgoods.wxss */
+.outbox{
+  width: 100%;
+}
+.box{
+  width: 100%;
+  position: relative;
+}
+.box image{
+  width: 100%;
+  height: 250rpx;
+  border-radius:10rpx; 
+}
+.textbox{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  top: 50%;
+  margin-top:-50rpx; 
+  text-align: center;
+  color: #fff;
+}
+.textbox text{
+  display: block;
+}
+
+

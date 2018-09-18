@@ -1,0 +1,46 @@
+<view class="box">
+
+
+
+    <view wx:if="{{carts.length==0}}" class='nothing'>
+        <image src='../../images/shopping1.png' mode='widthFix'></image>
+        <view class='nth-title'>
+            <text>购物车是空的</text>
+        </view>
+        <view class='shopping-btn'>
+            <button bindtap='back'>去购物</button>
+        </view>
+    </view>
+
+
+    <view wx:elif="{{carts.length>0}}">
+        <block wx:for="{{carts}}">
+            <view class="product-id">
+                <image src="{{item.src}}" mode="widthFix"></image>
+                <view class="product-mesg">
+                    <text>{{item.title}}</text>
+                    <view>
+                        <text class="product-price">￥{{item.price}}</text>
+                    </view>
+                    <view class="math">
+                        <text>当前数量：{{item.numb}}</text>
+                    </view>
+                    <view class="math-btn">
+                        <text bindtap="minus" class="bord" data-index="{{index}}" class='{{pulsbtn}}' >-</text>
+                        <text class="bord">{{item.numb}}</text>
+                        <text bindtap='add' class="bord" data-index="{{index}}">+</text>
+                        <text bindtap="deleteList" class='delete' data-index="{{index}}">删除</text>
+                    </view>
+                </view>
+
+            </view>
+
+        </block>
+        <view class='total'>
+            <text>总金额：{{totalPrice}}</text>
+            <button>结算</button>
+        </view>
+
+    </view>
+
+</view>

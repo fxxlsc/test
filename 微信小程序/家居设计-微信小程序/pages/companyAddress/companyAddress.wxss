@@ -1,0 +1,15 @@
+.about-us{
+  margin:10px 2%;
+}
+.about-us .about-us-header .firts-text{
+  color: 	#A0522D;
+  font-size: 24px;
+  font-weight: bold;
+}
+.about-us .about-us-header .second-text{
+  color: 	#696969;
+  border-bottom: 1px solid #ccc;
+}
+.about-us-map {
+ margin: 20px 0;
+}

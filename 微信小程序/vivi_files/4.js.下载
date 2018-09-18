@@ -1,0 +1,547 @@
+webpackJsonp([4],{
+
+/***/ "./pages/main/shangpin_fl.build.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+  	value: true
+  });
+  exports.createPageConfig = createPageConfig;
+  exports.createPage = createPage;
+
+  var _createPageConfig2 = __webpack_require__(16);
+
+  var _createPageConfig3 = _interopRequireDefault(_createPageConfig2);
+
+  var _shangpin_fl = __webpack_require__("./pages/main/shangpin_fl.user.js");
+
+  var _shangpin_fl2 = _interopRequireDefault(_shangpin_fl);
+
+  __webpack_require__(12);
+
+  __webpack_require__(18);
+
+  __webpack_require__(8);
+
+  __webpack_require__(7);
+
+  __webpack_require__(10);
+
+  __webpack_require__(25);
+
+  __webpack_require__(21);
+
+  __webpack_require__(11);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var $g_fns_restData = {
+  	get _userdata() {
+  		return {};
+  	}
+  };
+
+  var methods = {
+
+  	$items_list: function $items_list(_ref) {
+  		var listindex = _ref.listindex,
+  		    restData = _ref.restData,
+  		    params = _ref.params,
+  		    $page = _ref.$page,
+  		    props = _ref.props,
+  		    listitem = _ref.listitem;
+
+  		return restData.value;
+  	},
+
+  	$imageUrlFn_image: function $imageUrlFn_image(_ref2) {
+  		var listindex = _ref2.listindex,
+  		    restData = _ref2.restData,
+  		    params = _ref2.params,
+  		    $page = _ref2.$page,
+  		    props = _ref2.props,
+  		    listitem = _ref2.listitem;
+
+  		return listitem.ftu;
+  	}
+
+  };
+  var template = [[{
+  	"cls": wx.comp.RestData,
+  	"props": {
+  		"schema": {
+  			"limit": 20,
+  			"orderBy": [],
+  			"keyItems": "_key",
+  			"id": "restData",
+  			"type": "array",
+  			"items": {
+  				"fns": $g_fns_restData,
+  				"type": "object",
+  				"key": "_key",
+  				"props": {
+  					"fid": {
+  						"define": "fid",
+  						"label": "主键",
+  						"type": "string"
+  					},
+  					"fhuaming": {
+  						"define": "fhuaming",
+  						"label": "花名",
+  						"type": "string"
+  					},
+  					"ftu": {
+  						"define": "ftu",
+  						"label": "图",
+  						"type": "objectstorage"
+  					},
+  					"_key": {
+  						"type": "string"
+  					},
+  					"fjiage": {
+  						"define": "fjiage",
+  						"label": "价格",
+  						"type": "double"
+  					}
+  				}
+  			}
+  		},
+  		"options": {
+  			"isMain": false,
+  			"className": "main/shangpinfl",
+  			"autoMode": "load",
+  			"defSlaves": [],
+  			"url": "/dbrest",
+  			"confirmDelete": true,
+  			"tableName": "main_shangpinfl",
+  			"confirmRefreshText": "",
+  			"confirmDeleteText": "",
+  			"confirmRefresh": true,
+  			"idColumn": "fid"
+  		},
+  		"id": "restData",
+  		"filters": {}
+  	}
+  }], {
+  	"cls": wx.comp.Page,
+  	"props": {
+  		"id": "page"
+  	}
+  }, {
+  	"cls": wx.comp.WxApi,
+  	"props": {
+  		"id": "wxapi"
+  	}
+  }, {
+  	"cls": wx.comp.CommonOperation,
+  	"props": {
+  		"id": "commonOperation"
+  	}
+  }, {
+  	"cls": wx.comp.List,
+  	"props": {
+  		"$items": "$items_list",
+  		"item": "listitem",
+  		"autoRefresh": true,
+  		"dataId": "restData",
+  		"$template": [{
+  			"cls": wx.comp.Image,
+  			"props": {
+  				"$urlFn": "$imageUrlFn_image",
+  				"id": "image"
+  			}
+  		}],
+  		"autoLoadNextPage": true,
+  		"index": "listindex",
+  		"id": "list",
+  		"items": "restData.value",
+  		"key": "_key"
+  	}
+  }, {
+  	"cls": wx.comp.Toptips,
+  	"props": {
+  		"id": "__toptips__"
+  	}
+  }];
+  function createPageConfig() {
+  	return (0, _createPageConfig3.default)(_shangpin_fl2.default, template, methods);
+  }
+  function createPage(owner, pageid, props) {
+  	var page = new _shangpin_fl2.default(owner, props);
+  	page.$init(template, methods, pageid);
+  	return page;
+  }
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(140);
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(194);
+
+/***/ }),
+
+/***/ "./pages/main/shangpin_fl.user.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _getPrototypeOf = __webpack_require__(4);
+
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+  var _classCallCheck2 = __webpack_require__(3);
+
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+  var _possibleConstructorReturn2 = __webpack_require__(6);
+
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+  var _inherits2 = __webpack_require__(5);
+
+  var _inherits3 = _interopRequireDefault(_inherits2);
+
+  var _pageImpl = __webpack_require__(9);
+
+  var _pageImpl2 = _interopRequireDefault(_pageImpl);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var app = getApp();
+  var IndexPage = function (_PageImpl) {
+    (0, _inherits3.default)(IndexPage, _PageImpl);
+
+    function IndexPage() {
+      var _ref;
+
+      (0, _classCallCheck3.default)(this, IndexPage);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return (0, _possibleConstructorReturn3.default)(this, (_ref = IndexPage.__proto__ || (0, _getPrototypeOf2.default)(IndexPage)).call.apply(_ref, [this].concat(args)));
+    }
+
+    return IndexPage;
+  }(_pageImpl2.default);
+
+  exports.default = IndexPage;
+
+/***/ }),
+
+/***/ "../../../tools/uix-web/node_modules/css-loader/index.js?{\"sourceMap\":false,\"modules\":true,\"minimize\":false}!../../../tools/uix-web/node_modules/postcss-loader/index.js!./pages/main/shangpin_fl.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+  exports = module.exports = __webpack_require__(23)();
+  // imports
+
+
+  // module
+  exports.push([module.id, "", ""]);
+
+  // exports
+
+
+/***/ }),
+
+/***/ "./pages/main/shangpin_fl.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+  // style-loader: Adds some css to the DOM by adding a <style> tag
+
+  // load the styles
+  var content = __webpack_require__("../../../tools/uix-web/node_modules/css-loader/index.js?{\"sourceMap\":false,\"modules\":true,\"minimize\":false}!../../../tools/uix-web/node_modules/postcss-loader/index.js!./pages/main/shangpin_fl.css");
+  if(typeof content === 'string') content = [[module.id, content, '']];
+  // add the styles to the DOM
+  var update = __webpack_require__(24)(content, {});
+  if(content.locals) module.exports = content.locals;
+  // Hot Module Replacement
+  if(true) {
+  	// When the styles change, update the <style> tags
+  	if(!content.locals) {
+  		module.hot.accept("../../../tools/uix-web/node_modules/css-loader/index.js?{\"sourceMap\":false,\"modules\":true,\"minimize\":false}!../../../tools/uix-web/node_modules/postcss-loader/index.js!./pages/main/shangpin_fl.css", function() {
+  			var newContent = __webpack_require__("../../../tools/uix-web/node_modules/css-loader/index.js?{\"sourceMap\":false,\"modules\":true,\"minimize\":false}!../../../tools/uix-web/node_modules/postcss-loader/index.js!./pages/main/shangpin_fl.css");
+  			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+  			update(newContent);
+  		});
+  	}
+  	// When the module is disposed, remove the <style> tags
+  	module.hot.dispose(function() { update(); });
+  }
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(24);
+
+/***/ }),
+
+/***/ "./pages/main/shangpin_fl.component.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+  	value: true
+  });
+
+  var _getPrototypeOf = __webpack_require__(4);
+
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+  var _classCallCheck2 = __webpack_require__(3);
+
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+  var _createClass2 = __webpack_require__(19);
+
+  var _createClass3 = _interopRequireDefault(_createClass2);
+
+  var _possibleConstructorReturn2 = __webpack_require__(6);
+
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+  var _inherits2 = __webpack_require__(5);
+
+  var _inherits3 = _interopRequireDefault(_inherits2);
+
+  var _react = __webpack_require__(17);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _pageComponent = __webpack_require__(15);
+
+  var _pageComponent2 = _interopRequireDefault(_pageComponent);
+
+  var _utils = __webpack_require__(22);
+
+  var _WxImage = __webpack_require__(20);
+
+  var _WxImage2 = _interopRequireDefault(_WxImage);
+
+  var _WxView = __webpack_require__(14);
+
+  var _WxView2 = _interopRequireDefault(_WxView);
+
+  var _WxText = __webpack_require__(13);
+
+  var _WxText2 = _interopRequireDefault(_WxText);
+
+  var _shangpin_fl = __webpack_require__("./pages/main/shangpin_fl.js");
+
+  var _shangpin_fl2 = _interopRequireDefault(_shangpin_fl);
+
+  var _shangpin_fl3 = __webpack_require__("./pages/main/shangpin_fl.css");
+
+  var _shangpin_fl4 = _interopRequireDefault(_shangpin_fl3);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var wxPagePathResolver = function (currentPath) {
+  	return function (path, isCodePath) {
+  		return (0, _utils.__toUrl)(currentPath, path, isCodePath);
+  	};
+  }('/main/shangpin_fl.w');
+
+  var wxPageConfig = {};
+  var __shangpin_flPage__ = function (_PageComponent) {
+  	(0, _inherits3.default)(__shangpin_flPage__, _PageComponent);
+
+  	function __shangpin_flPage__() {
+  		var _ref;
+
+  		(0, _classCallCheck3.default)(this, __shangpin_flPage__);
+
+  		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+  			args[_key] = arguments[_key];
+  		}
+
+  		return (0, _possibleConstructorReturn3.default)(this, (_ref = __shangpin_flPage__.__proto__ || (0, _getPrototypeOf2.default)(__shangpin_flPage__)).call.apply(_ref, [this, { wxPageDeclaration: _shangpin_fl2.default, wxPageStyle: _shangpin_fl4.default, wxPageConfig: wxPageConfig, wxPagePathResolver: wxPagePathResolver }].concat(args)));
+  	}
+
+  	(0, _createClass3.default)(__shangpin_flPage__, [{
+  		key: 'render',
+  		value: function render() {
+  			var $state = this.state || {};
+  			var fid = $state.fid;
+  			var listindex = $state.listindex;
+  			var image = $state.image;
+  			var __toptips__ = $state.__toptips__;
+  			var msgs = $state.msgs;
+  			var wx = $state.wx;
+  			var item = $state.item;
+  			var __pageid__ = $state.__pageid__;
+  			var show = $state.show;
+  			var list = $state.list;
+  			var message = $state.message;
+  			var url = $state.url;
+  			var listitem = $state.listitem;
+  			var fjiage = $state.fjiage;
+  			var toptips = $state.toptips;
+  			var fhuaming = $state.fhuaming;
+  			var compid = $state.compid;
+  			var children = $state.children;
+  			var typeClass = $state.typeClass;
+  			var items = $state.items;
+  			return _react2.default.createElement(
+  				_WxView2.default,
+  				{ id: 'page', className: 'x-page' },
+  				_react2.default.createElement(_WxView2.default, { id: 'inVisibleCompContainer' }),
+  				(0, _utils._toArray)((0, _utils._exRun)('list.items', 'list')(list)).map(function (listitem, listindex) {
+  					return _react2.default.createElement(
+  						_WxView2.default,
+  						{ _created: 'true', id: 'list', label: '\u52A8\u6001\u5217\u8868', style: (0, _utils.__styleToJSON)('width:50%;display:inline-block'), 'data-idcolumn': (0, _utils._exRun)('listitem.fid', 'listitem')(listitem), 'data-index': listindex, 'data-compid': (0, _utils._exRun)('list.compid', 'list')(list), 'data-pageid': __pageid__, 'data-capture-bindtap': (0, _utils._exRun)('list.compid', 'list')(list) + ':onRowClick', capturebindtap: 'dispatchCaptureBind', key: listitem['_key'] || _.random(0, 1000, true) },
+  						_react2.default.createElement(
+  							_WxView2.default,
+  							{ id: 'view', style: (0, _utils.__styleToJSON)('position:relative;margin-top:10px;margin-left:5px;margin-right:5px') },
+  							_react2.default.createElement(_WxImage2.default, { id: 'image', mode: 'scaleToFill', style: (0, _utils.__styleToJSON)('width:100%;height:150px'), src: wxPagePathResolver((0, _utils._exRun)('listitem.$children.image.url', 'listitem')(listitem)), className: 'weui-img' }),
+  							_react2.default.createElement(
+  								_WxText2.default,
+  								{ id: 'text1', style: (0, _utils.__styleToJSON)('position:relative;left:10px;font-size:13px') },
+  								(0, _utils._exRun)('(' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('listitem.fhuaming', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===null', 'listitem')(listitem) + '||' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('listitem.fhuaming', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===undefined', 'listitem')(listitem) + '', 'listitem')(listitem) + '||' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('listitem.fhuaming', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===""', 'listitem')(listitem) + '', 'listitem')(listitem) + ')?"":(' + (0, _utils.__exRun)('listitem.fhuaming', 'listitem')(listitem) + ')', 'listitem')(listitem)
+  							),
+  							_react2.default.createElement(
+  								_WxText2.default,
+  								{ id: 'text', style: (0, _utils.__styleToJSON)('position:absolute;right:10px;color:#D5A6BD') },
+  								(0, _utils._exRun)('(' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('"￥"+listitem.fjiage', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===null', 'listitem')(listitem) + '||' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('"￥"+listitem.fjiage', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===undefined', 'listitem')(listitem) + '', 'listitem')(listitem) + '||' + (0, _utils.__exRun)('' + (0, _utils.__exRun)('(' + (0, _utils.__exRun)('"￥"+listitem.fjiage', 'listitem')(listitem) + ')', 'listitem')(listitem) + '===""', 'listitem')(listitem) + '', 'listitem')(listitem) + ')?"":(' + (0, _utils.__exRun)('"￥"+listitem.fjiage', 'listitem')(listitem) + ')', 'listitem')(listitem)
+  							)
+  						)
+  					);
+  				}),
+  				_react2.default.createElement(
+  					_WxView2.default,
+  					{ id: '__toptips__', hidden: (0, _utils._exRun)('!' + (0, _utils.__exRun)('__toptips__.show', '__toptips__')(__toptips__) + '', '__toptips__')(__toptips__), className: 'wx-toptips' },
+  					(0, _utils._toArray)((0, _utils._exRun)('__toptips__.msgs', '__toptips__')(__toptips__)).map(function (item, index) {
+  						return _react2.default.createElement(
+  							_WxView2.default,
+  							{ key: item['_key'] || _.random(0, 1000, true), className: 'wx-toptips-item ' + (0, _utils._exRun)('item.typeClass', 'item')(item) + ' ' + (0, _utils._exRun)('item.show?"wx-toptips--show":""', 'item')(item) },
+  							(0, _utils._exRun)('item.message', 'item')(item)
+  						);
+  					})
+  				)
+  			);
+  		}
+  	}]);
+  	return __shangpin_flPage__;
+  }(_pageComponent2.default);
+
+  exports.default = __shangpin_flPage__;
+
+/***/ }),
+
+/***/ "./pages/main/shangpin_fl.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _shangpin_fl = __webpack_require__("./pages/main/shangpin_fl.build.js");
+
+  var __wxPageOption = void 0;
+
+  Page((0, _shangpin_fl.createPageConfig)());
+  function Page(option) {
+    __wxPageOption = option;
+  }
+  exports.default = __wxPageOption;
+
+/***/ }),
+
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(246);
+
+/***/ }),
+
+/***/ 11:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(272);
+
+/***/ }),
+
+/***/ 12:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(31);
+
+/***/ }),
+
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(2))(430);
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(2))(434);
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(2))(441);
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(80);
+
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(162);
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(2))(410);
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(77);
+
+/***/ }),
+
+/***/ 25:
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = (__webpack_require__(1))(178);
+
+/***/ })
+
+});

@@ -1,0 +1,135 @@
+/* pages/good/good.wxss */
+/* pages/content/content.wxss */
+page{
+	background: #eee;
+}
+.container{
+	padding: 0;
+	display: block;
+}
+.tu{
+	width: 100%;
+	height: 100%;
+}
+.tu{
+	height: 300px;
+}
+.row{
+	box-sizing: border-box;
+	padding: 20rpx 30rpx;
+	line-height: 1.8;
+	background: #fff;
+	margin-bottom: 20rpx;
+}
+.title{
+	font-size: 0.9em;
+	color: #666;
+
+}
+.title1{
+  font-size: 0.9em;
+	color: #666;
+    display: flex;
+  justify-content: space-between;
+}
+.fabiao{
+  border: 2px solid #eee;
+  border-radius:10rpx; 
+}
+.time{
+	color: #999;
+	font-size: 0.7em;
+}
+.price{
+	color: #fe8064;
+	font-size: 1.2em;
+}
+.tip{
+	font-size: 0.7em;
+	color: red;
+	border: 1px solid red;
+	margin: 10rpx 0 ;
+	border-radius: 10rpx;
+	width: 140rpx;
+	text-align: center
+}
+.frow{
+	display: flex;
+	align-items: center;
+}
+.info{
+	font-size: 0.7em;
+	color: #fff;
+	border: 1px solid #999;
+	background: #555;
+	border-radius: 10rpx;
+	padding:  0 20rpx;
+	margin-left: 20rpx;
+}
+.tbox{
+	margin-top: 20rpx;
+	padding:.5em 1.5em;
+	border: 1px solid #e5e5e5;
+	border-radius: 10rpx;
+	font-size: .7em;
+	color: #4d525d;
+	line-height: 1.4em;
+	background-color: #f8f8f8;
+	margin-right: 20rpx;
+}
+.tactive{
+	border: 1px solid rgb(255,129,97);
+	background-color: rgb(255,129,97);
+    	color: white;
+}
+.tou{
+	width: 110rpx;
+	height: 110rpx;
+}
+.ptitle{
+	padding-left: 20rpx;
+	font-size: 0.9em;
+}
+.title-ccc{
+	font-size: 0.8em;
+	color: #afafaf;
+}
+.txt{
+	width: 100%;
+	font-size: 0.8em;
+	color: #898;
+	padding:0 30rpx;
+	text-align: justify;
+	box-sizing: border-box;
+	margin-bottom: 50rpx;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 50rpx;
+}
+.go{
+	font-size: 0.8em;
+	background: #eee;
+	color: #000;
+	height: 100rpx;
+	line-height: 100rpx;
+	width: 50%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+  border-right: 2px solid #eee;
+}
+.go1{
+	font-size: 0.8em;
+	background: #fe8064;
+	color: #fff;
+	height: 100rpx;
+	line-height: 100rpx;
+	width: 50%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.mb{
+	margin-bottom: 100rpx;
+}

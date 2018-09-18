@@ -1,0 +1,24 @@
+<!--pages/personal/personal.wxml-->
+<view class='banner'>
+   <image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/ghost-presenter-423659-unsplash.jpg'></image>
+</view>
+<view class='box'>
+   <view class='headimg'><image src='{{userimg}}'></image></view>
+   <view class="name"><text>{{username}}</text></view>
+   <view class='buy' bindtap='maijilu'><image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/更多-购买记录.png'></image><text>购买记录</text></view>
+    <view class='shouchang' bindtap='shouchang'><image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/收藏.png'></image><text>我的收藏</text></view>
+   <view class='line'></view>
+   <view class='order'>
+    <text>我的订单</text>
+    <text bindtap='allorder'>全部订单></text>
+  </view>
+  <view class='join'><text>参加过的</text></view>
+     <view class='outbox'>
+  <block wx:for="{{goodslist}}" wx:key="{{index}}">
+  <view  data-index='{{index}}' bindtap='goods' class='joinbox'>
+    <view class='imgbox'><image src='{{item.src}}' mode='aspectFill'></image></view>
+    <view class='textbox'><view><text>{{item.text}}</text></view></view>
+  </view>
+</block>
+</view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/qiu/qiu.wxss */
+@import "/pages/templates/nav.wxss";
+.banner{
+  width: 100%;
+}
+.banner image{
+  width: 100%;
+}
+.cunbigbox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cunbox{
+  flex-basis: 45%;
+}
+.cunbox image{
+  width: 100%;
+  height: 300rpx;
+  border-radius:10rpx; 
+}
+.name{
+  font-size: 30rpx;
+}
+.price{
+  font-size: 26rpx;
+  color: red;
+}
+.textbox{
+  display: flex;
+  justify-content: space-between;
+}

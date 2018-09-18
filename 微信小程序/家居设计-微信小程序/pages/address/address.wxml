@@ -1,0 +1,21 @@
+<view class="box">
+    <view class='address'>
+        <view>
+            <text>林跃：13666666666</text>
+        </view>
+        <view>
+            <text>收货地址：四川省成都市高新区云华路333号</text>
+        </view>
+        <view>
+            <text>收货时间：</text>
+        </view>
+
+    </view>
+    <view class='bianji'>
+        <text class='first'>删除</text>
+        <text class='second'>编辑</text>
+    </view>
+
+
+
+</view>

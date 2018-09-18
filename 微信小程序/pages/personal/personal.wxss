@@ -1,0 +1,101 @@
+/* pages/personal/personal.wxss */
+.banner{
+  width: 100%;
+}
+.banner image{
+  width: 100%;
+}
+.name{
+  text-align: center;
+}
+.box{
+  width: 100%;
+  border-radius:40rpx;
+  position: absolute;
+  top: 350rpx;
+  background: #eee; 
+}
+.headimg{
+  width: 300rpx;
+  height: 300rpx;
+  margin: -100rpx auto 0;
+  border-radius:50%; 
+}
+.headimg image{
+  width: 100%;
+  height: 100%;
+  border-radius:50%; 
+}
+.name{
+    width: 400rpx;
+    margin: 30rpx auto;
+}
+.line{
+  width: 100%;
+  border: 2rpx solid #999;
+}
+.buy,.shouchang{
+  width: 180rpx;
+  height: 180rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.buy image,.shouchang image{
+  width: 81rpx;
+  height: 81rpx;
+  display: block;
+  margin:  0 auto;
+  margin-bottom: 30rpx;
+}
+.buy{
+  position: absolute;
+  top: 30rpx;
+  left: 28rpx;
+}
+.shouchang{
+  top: 30rpx;
+  position: absolute;
+  right: 28rpx;
+}
+.order{
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  padding: 0 20rpx 0;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-bottom:20rpx;  
+}
+.join{
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.outbox{
+  width: 100%;
+}
+.joinbox{
+  width: 100%;
+  position: relative;
+}
+.joinbox image{
+  width: 100%;
+  height: 250rpx;
+  border-radius:10rpx; 
+}
+.textbox{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  top: 50%;
+  margin-top:-50rpx; 
+  text-align: center;
+  color: #fff;
+}
+.textbox text{
+  display: block;
+}

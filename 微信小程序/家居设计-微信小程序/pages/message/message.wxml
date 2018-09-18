@@ -1,0 +1,66 @@
+<!--message.wxml-->
+<view class="msgba_box">
+
+  <image src="../../images/product1.jpg" mode="aspectFit" />
+
+</view>
+
+<view class="pl_nums">
+  <view class="my_pl">
+    <text>{{liuyanarry.length}}</text>
+  </view>
+
+  <text>条评论</text>
+</view>
+
+
+<view class="lysection">
+  <form bindsubmit="bindFormSubmit">
+    <textarea value="{{lyvalue}}" catchtap="textareaclick" class="{{textbtn}}" placeholder="我也来说几句..." name="textarea" placeholder-style="color:#cec8c8;font-size:12px;"/>
+
+    <view class="upimg_box">
+
+      <view class="upimg_itm">
+        <button form-type="submit">发布</button>
+
+      </view>
+    </view>
+
+  </form>
+
+  <block wx:for="{{liuyanarry}}">
+
+  <view class="peplebox" wx:if="{{item.lycontent!=''}}">
+    <view class="masg_shang">
+    <view class="msg_tx">
+      <image  wx:if="{{item.lytx}}" src="{{item.lytx}}" ></image>
+      <image wx:else src="{{userInfo.avatarUrl}}" ></image>
+      
+      <view>
+        <text class="mytest" wx:if="{{item.lyname}}">{{item.lyname}}
+        </text>
+        <text class="mytest" wx:else >{{userInfo.nickName}} 
+        </text>
+        <text class="mytest">{{item.time}}</text>
+      </view>
+    </view>
+      
+      <view class="huifu">
+       <image src="../../images/style2.png"></image> 
+      <text>回复</text>
+      </view>  
+    </view>
+
+    <view class="masg_xia">
+     {{item.lycontent}}
+    </view>
+  </view>
+
+  
+  </block>
+
+  
+
+
+
+</view>

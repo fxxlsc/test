@@ -1,0 +1,43 @@
+<view class="box">
+
+    <view class="banner">
+        <image src="../../images/temaibanner.png"></image>
+    </view>
+
+    <view class="btn-nav">
+        <text bindtap="changeProductt">推荐</text>
+        <text bindtap="changeProduct">家饰</text>
+        <text bindtap="changeProducto">床品</text>
+        <text bindtap="changeProductth">餐具</text>
+    </view>
+
+    <view class="productList">
+        <block wx:for="{{arr}}">
+            <view class="productDetail">
+                <image src="{{item.src}}" mode="aspectFit" bindtap="listClickon" id="{{index}}" wx:key="id"></image>
+                <view class="product-Text">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="product-price">
+                    <text>￥{{item.price}}</text>
+                    <image src="../../images/shopping1.png" mode="aspectFit"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <view class="xfk">
+        <view class="fk1">
+            <contact-button style='padding-top:10px' type="default-light" size="20" session-from="weapp">
+            </contact-button>
+            <!-- <image src="../../images/kefu2.png"></image> -->
+        </view>
+        <view class="fk1">
+            <image src="../../images/dingdan2.png"></image>
+        </view>
+        <view class="fk1">
+            <image src="../../images/shopping3.png" bindtap='addShopping'></image>
+        </view>
+
+    </view>
+</view>

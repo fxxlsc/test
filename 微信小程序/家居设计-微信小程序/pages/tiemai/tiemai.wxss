@@ -1,0 +1,56 @@
+
+.box{
+  font-family: "微软雅黑"；
+}
+.banner image{
+  width: 100%;
+}
+.btn-nav{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.product-price text{
+  color: red;
+}
+.product-price image{
+  width: 30px;
+  height: 25px;
+}
+.productList{
+  display: flex;
+   justify-content: space-around; 
+   flex-wrap: wrap;
+}
+.productList .productDetail{
+  flex-basis: 45%;
+  font-size: 12px;
+  line-height: 24px;
+}
+.productList .productDetail image{
+  width: 100%;
+}
+.product-price{
+  display: flex;
+}
+
+ .xfk{
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  } 
+.xfk .fk1{
+  width: 40px;
+  height:40px;
+ background-color: rgba(0,0,0,.5);
+ border-bottom: 1px solid #FFFFFF;
+ text-align: center;
+
+}
+.xfk .fk1 image{
+  width: 20px;
+  height:20px;
+  padding: 10px;
+}
+
+/*  */

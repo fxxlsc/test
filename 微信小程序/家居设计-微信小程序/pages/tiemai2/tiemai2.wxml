@@ -1,0 +1,85 @@
+<view class="box">
+  <view class="banner">
+    <image src="{{src}}" mode="aspectFill"></image>
+  </view>
+  <view class="goods-mes">
+    <view class="goods-zh">
+      <view class="goods-name">
+        <text>{{title}}</text>
+      </view>
+      <view class="goods-price">
+        <text>￥ {{price}}</text>
+      </view>
+    </view>
+
+    <view class="goods-zh">
+      <view class="goods-nub">
+        <text>库存: {{math}}</text>
+      </view>
+      <view class="goods-yunfei">
+        <text>运费: {{yufei}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="goods-pingjia">
+    <text class="pingjia">宝贝评价(0)</text>
+    <view class="dengji">
+      <view class="dengji-style"><text>有图(0)</text></view>
+      <view class="dengji-style"><text> 好评(0)</text></view>
+      <view class="dengji-style"><text> 中评(0)</text></view>
+      <view class="dengji-style"><text>差评(0)</text> </view>
+    </view>
+  </view>
+
+  <view class="goods-text">
+    <view class="header">
+      <text>产品详情</text>
+    </view>
+    <view class="detail">
+      <text>{{textW}}</text>
+    </view>
+  </view>
+
+  <view class="goods-img">
+    <image src="{{src3}}"></image>
+    <image src="{{src1}}"></image>
+    <image src="{{src2}}"></image>
+  </view>
+
+  <view class="goods-shopping">
+
+  
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+
+      <view class="text-one">
+        <view class="product-mes">
+          <image src="{{src}}" mode="widthFix"></image>
+          <text>{{title}}</text>
+          <text bindtap="hideModal" class="close">X</text>
+        </view>
+        <view class="product-price">
+          <text>￥ {{price}}</text>
+        </view>
+      </view>
+
+      <view class="product-math">
+        <text>数量:      库存 {{math}}</text>
+        <button plain="true" bindtap="bindMinus" >-</button>
+       <input type="number" bindchange="bindManual" value="{{num}}" style='padding-top:10px;'/>
+        <!-- <view class="product-sl">{{index.num}}</view> -->
+        <button plain="true" bindtap="bindPlus">+</button>
+      </view>
+
+      <button class="btn-color" bindtap="shoppingDo" data-price="{{price}}" data-title="{{title}}" data-src="{{src}}">下一步</button>
+
+    </view>
+
+
+    <view class="shopping-btn">
+      <button class="btn-color" bindtap="showModal">立即购买</button>
+      <button bindtap="showModal">加入购物车</button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/address/address",
+    "pages/gouwuche/gouwuche",
+    "pages/fenye1/fenye1",
+    "pages/message/message",
+    "pages/tiemai2/tiemai2",
+    "pages/model/model",
+    "pages/tiemai/tiemai",
+    "pages/money/money",
+    "pages/jiazhuang/jiazhuang",
+    "pages/jiazhuangTip/jiazhuangTip",
+    "pages/book/book",
+    "pages/company/company",
+    "pages/thinks/thinks",
+    "pages/companyAddress/companyAddress",
+    "pages/my/my",
+    "pages/recommend/recommend",
+    "pages/case/case",
+    "pages/desgin/desgin",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/fenye2/fenye2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/shouye/shouye",
+        "text": "首页",
+        "iconPath": "images/family2.png",
+        "selectedIconPath": "images/family5.png"
+      },
+      {
+        "pagePath": "pages/tiemai/tiemai",
+        "text": "特卖",
+        "iconPath": "images/family4.png",
+        "selectedIconPath": "images/family8.png"
+      },
+      {
+        "pagePath": "pages/jiazhuang/jiazhuang",
+        "text": "家装圈",
+        "iconPath": "images/family1.png",
+        "selectedIconPath": "images/family6.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/family3.png",
+        "selectedIconPath": "images/family7.png"
+      }
+    ],
+    "color": "#333",
+    "selectedColor": "#8B4513",
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "position": "bottom"
+  }
+}

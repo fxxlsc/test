@@ -1,0 +1,178 @@
+.box{
+  font-family: "微软雅黑"；
+}
+.header .header-Text{
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.header .header-Tip{
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-Tip text{
+  margin: 10px 10px;
+}
+.header  .Text-data{
+  margin: 10px 10px;
+}
+.detail-Text .text-img image{
+  width: 100%;
+  margin: 40px 0;
+}
+.webben{
+width: 96%;
+margin-left: 2%;
+text-align: center;
+font-size: 14px;
+line-height: 24px;
+}
+.pinglun{
+margin-top: 20px;
+}
+
+.pinglun input{
+  border: 1px solid #ccc;
+}
+
+.liuyanqu {
+    margin-top: 20px;
+    border-bottom: 2px solid red;
+}
+.liuyanqu .liuyanqu-title{
+  font-size: 24px;
+  color: red;
+
+}
+.message  .user-message{
+display: flex;
+justify-content: space-around;
+}
+
+.message  .user-message .user-img{
+  flex-basis: 20%;
+}
+
+
+/*..........................  */
+
+.pl_nums {
+    margin: 6px 0 6px 8px;
+    height: 35px;
+    line-height: 28px;
+}
+
+.my_pl {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    background-image: url("../images/plun.png");
+}
+
+.pl_nums>text {
+    font-size: 13px;
+    margin-left: 5px;
+    color: #444;
+}
+
+textarea {
+    border: 1px solid #d6d1d1;
+    border-radius: 3px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 8px 4px;
+}
+
+.active {
+    height: 120px;
+}
+
+
+
+.noactive {
+    height: 20px;
+}
+
+.upimg_box {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 14px;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upimg_itm {
+    width: 30%;
+    height: 100%;
+}
+
+.upimg_itm button {
+    height: 70%;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: #3db7fa;
+    color: white;
+    width: 53%;
+}
+
+.msg_tx>image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.peplebox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed #e0e0e0;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.peplebox>view {
+    width: 94%;
+    margin-bottom: 10px;
+}
+
+.masg_shang {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 12px 0;
+}
+
+.masg_xia {
+    margin: 12px 0;
+    padding-bottom: 6px;
+    line-height: 20px;
+}
+
+.msg_tx {
+    display: flex;
+}
+
+.msg_tx view text:nth-child(2) {
+    color: #bfbfbf;
+}
+
+.mytest {
+    display: block;
+    padding: 3px 8px;
+}
+
+.huifu>image {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}

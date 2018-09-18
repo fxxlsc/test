@@ -1,0 +1,63 @@
+/* pages/shopindex/shopindex.wxss */
+@import "/pages/templates/nav.wxss";
+.banner{
+  width: 100%;
+  /* height: 240rpx; */
+}
+.banner image{
+  width: 100%;
+}
+.hotactive{ 
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-left: 8rpx solid red;
+  margin: 40rpx 0 40rpx;
+}
+.bigtext{
+  font-size: 32rpx;
+  font-weight: bolder;
+  margin-left: 50rpx;
+}
+.smalltext{
+  font-size: 20rpx;
+  color: #bbb;
+}
+.scroll-box{
+  width: 800px;
+  height: 200px;
+}
+.abouttourbox{
+  margin-left: 30rpx;
+}
+.abouttour{
+  width: 100%;
+  height: 360rpx;
+  position: relative;
+}
+.abouttour image{
+  width: 100%;
+  height: 300rpx;
+  border-radius:20rpx; 
+}
+.abouttour text{
+  position: absolute;
+  font-size: 22rpx;
+  color: black;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  white-space:pre-wrap;
+}
+.heikuang{
+  width: 100%;
+  height: 40rpx;
+  background: #eee;
+  margin-top: 30rpx;
+}
+.all{
+   font-size: 28rpx;
+   position: absolute;
+   right: 20rpx;
+   margin-top:10rpx; 
+}

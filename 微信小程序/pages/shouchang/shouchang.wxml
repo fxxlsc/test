@@ -1,0 +1,15 @@
+<!--pages/shouchang/shouchang.wxml-->
+<view class='box1' wx:if='{{shouchanglist==""}}'>
+  <view><text>您还没有收藏哦！</text>
+  <image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/Navi_购买.png'></image>
+  </view>
+</view>
+<view  wx:else class='outbox'>
+  <block wx:for="{{shouchanglist}}" wx:key="{{index}}">
+  <view class='box'>
+    <view class='imgbox'><image data-index='{{index}}' bindtap='goods' src='{{item.src}}' mode='aspectFill'></image></view>
+    <view class='textbox'><view><text>{{item.name}}</text></view></view>
+  </view>
+</block>
+</view>
+

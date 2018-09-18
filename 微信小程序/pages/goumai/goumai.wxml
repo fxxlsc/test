@@ -1,0 +1,9 @@
+<!--pages/goumai/goumai.wxml-->
+<view class='outbox'>
+  <block wx:for="{{goumailist}}" wx:key="{{index}}">
+  <view class='box'>
+    <view class='imgbox'><image data-index='{{index}}' bindtap='goods' src='{{item.src}}' mode='aspectFill'></image></view>
+    <view class='textbox'><view><text>{{item.text}}</text><text>{{item.price}}</text></view></view>
+  </view>
+</block>
+</view>

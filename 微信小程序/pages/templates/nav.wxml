@@ -1,0 +1,8 @@
+<template name="nav">
+  <view class='nav'>
+  <navigator url='/pages/cun/cun'><view class='navbox'><image class='navicon' src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/春.png'></image><text class='navtext'>初春</text></view></navigator>
+  <navigator url='./../xia/xia'><view class='navbox'><image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/太阳.png' class='navicon'></image><text class='navtext'>夏至</text></view></navigator>
+  <navigator url='./../qiu/qiu'><view class='navbox'><image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/作物-水稻.png' class='navicon'></image><text class='navtext'>残秋</text></view></navigator>
+  <navigator url='./../dong/dong'><view class='navbox'><image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/雪花 (1).png' class='navicon'></image><text class='navtext'>冬末</text></view></navigator>
+</view>
+</template>

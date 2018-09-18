@@ -1,0 +1,48 @@
+<view class="box">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <!-- <view class="username">
+    <image src="../../images/username.png" mode="widthFix"></image>
+    <view class="user-Name">用户名</view>
+  </view> -->
+  <view class="bg">
+
+    <view class="userInfoo">
+      <view class="useInfo-style">
+        <image src="../../images/address.png" mode="widthFix" ></image>
+        <text bindtap='Addaddress'>收货地址</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/dingdan.png" mode="widthFix"></image>
+        <text bindtap='myDingdan'>我的订单</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/shopping1.png" mode="widthFix"></image>
+        <text bindtap='Addshopping'>购物车</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/vip.png" mode="widthFix"></image>
+        <text bindtap='Addvip'>会员卡</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/zhekou.png" mode="widthFix"></image>
+        <text bindtap='Addmoney'>优惠券</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/scores.png" mode="widthFix"></image>
+        <text bindtap='Addscores'>积分</text>
+      </view>
+      <view class="useInfo-style">
+        <image src="../../images/concact1.png" mode="widthFix"></image>
+        <text>联系客服</text>
+      </view>
+
+    </view>
+
+
+
+  </view>
+</view>

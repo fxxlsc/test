@@ -1,0 +1,17 @@
+<!--pages/xia/xia.wxml-->
+<import src="/pages/templates/nav"/>
+<view class='banner'>
+  <image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/914872d0e65f124f602cfc7dd0964c1a.jpg' mode='widthFix'></image>
+</view>
+<template is="nav"/>
+<view class='cunbigbox'>
+  <block wx:for="{{goodslist}}" wx:key="{{index}}">
+  <view class='cunbox'>
+    <image data-index='{{index}}' bindtap='goods' lazy-load='true' src='{{item.src}}'></image>
+    <view class='textbox'>
+      <text class='name'>{{item.text}}</text>
+      <text class='price'>{{item.price}}</text>
+    </view>
+  </view>
+</block>
+</view>

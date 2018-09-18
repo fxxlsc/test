@@ -1,0 +1,9 @@
+<!--pages/allgoods/allgoods.wxml-->
+<view class='outbox'>
+  <block wx:for="{{goodslist}}" wx:key="{{index}}">
+  <view  data-index='{{index}}' bindtap='goods' class='box'>
+    <view class='imgbox'><image src='{{item.src}}' mode='aspectFill'></image></view>
+    <view class='textbox'><view><text>{{item.text}}</text></view></view>
+  </view>
+</block>
+</view>

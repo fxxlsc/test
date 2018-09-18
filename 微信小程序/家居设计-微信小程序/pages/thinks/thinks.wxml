@@ -1,0 +1,12 @@
+<view class="box">
+  <view class="banner">
+    <image src="../../images/thinks.png"></image>
+  </view>
+  <form>
+    <input name="username" placeholder="请输入姓名" placeholder-style="font-size:14px;" />
+    <input name="usertelephone" placeholder="请输入电话" placeholder-style="font-size:14px;" />
+    <view class="section">
+      <textarea placeholder="请输入建议" placeholder-style="font-size:14px;" />
+    </view>
+  </form>
+</view>

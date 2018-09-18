@@ -1,0 +1,91 @@
+.product-id {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.product-id image {
+    flex-basis: 30%;
+}
+
+.product-id text {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.product-id .product-mesg {
+    flex-basis: 60%;
+}
+
+.product-price {
+    color: red;
+}
+
+.math-btn {
+    display: flex;
+    /* justify-content: space-around; */
+    height: 30px;
+    margin-top: 10px;
+}
+
+ .math-btn text {
+    text-align: center;
+} 
+.delete{
+  margin-left: 40px;
+}
+.bord {
+    flex-basis: 10%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+}
+
+.total {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 15%;
+    text-align: center;
+}
+
+.total text {
+    color: red;
+    padding-top: 4%;
+}
+
+.total button {
+    margin-top: 4%;
+    background-color: #ff4500;
+}
+
+.nth-title {
+    width: 100%;
+}
+
+.nth-title {
+    text-align: center;
+}
+
+.shopping-btn {
+    margin-top: 2%;
+}
+
+/*.............................  */
+
+.active {
+    color: black;
+    flex-basis: 10%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+}
+
+.unable {
+    color: #ccc;
+    flex-basis: 10%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+}

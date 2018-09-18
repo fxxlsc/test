@@ -1,0 +1,126 @@
+/* message.wxss */
+
+
+.lysection{
+  padding-bottom: 30px;
+}
+
+.msgba_box image {
+  width: 100%;
+  height: 248px;
+}
+
+.pl_nums {
+  margin: 6px 0 6px 8px;
+  height: 35px;
+  line-height: 28px;
+}
+
+.my_pl {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  background-image: url("../images/plun.png");
+}
+
+.pl_nums>text {
+  font-size: 13px;
+  margin-left: 5px;
+  color: #444;
+}
+
+textarea {
+  border: 1px solid #d6d1d1;
+  border-radius: 3px;
+  width: 92%;
+  margin: 0 auto;
+  padding: 8px 4px;
+}
+
+.active {
+  height: 120px;
+}
+
+.noactive {
+  height: 20px;
+}
+
+.upimg_box {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: 14px;
+  height: 40px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.upimg_itm {
+  width: 30%;
+  height: 100%;
+  
+
+}
+
+.upimg_itm button {
+  height: 70%;
+  border-radius: 2px;
+  font-size: 12px;
+  background-color: #3db7fa;
+  color: white;
+  width: 53%;
+
+}
+
+.msg_tx>image{
+  width:40px;
+   height:40px; 
+  border-radius: 4px;
+}
+.peplebox{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed #E0E0E0;
+  font-size: 13px;
+  padding:10px 0;
+}
+.peplebox>view{
+  width: 94%;
+  margin-bottom: 10px;
+}
+.masg_shang{
+  display: flex;
+  justify-content:space-between;
+  margin: 24px 0 12px 0
+}
+.masg_xia{
+    margin: 12px 0 ;
+     padding-bottom: 6px; 
+     line-height: 20px;
+}
+.msg_tx{
+  display: flex;
+}
+.msg_tx view text:nth-child(2){
+  color: #BFBFBF;
+}
+.mytest{
+ display: block; 
+ padding:3px 8px; 
+}
+
+.huifu>image {
+  width:20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}

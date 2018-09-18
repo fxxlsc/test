@@ -1,0 +1,30 @@
+.box{
+    background-color: #FED811;
+    height: 600px;
+    font-size: 14px;
+    font-family: "微软雅黑"；
+}
+
+.bookimg image{
+width: 100%;
+}
+.input-message input{
+width: 80%;
+margin-left: 10%;
+background-color: 	#FFFFFF;
+margin-top: 10px;
+border: 1px solid #ccc;
+}
+.input-message textarea{
+  margin-top: 10px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: 	#FFFFFF;
+  border: 1px solid #ccc;
+}
+.input-message button{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  background-color: #34B6FD;
+}

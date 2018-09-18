@@ -1,0 +1,18 @@
+<!--pages/dong/dong.wxml-->
+<!--pages/cun/cun.wxml-->
+<import src="/pages/templates/nav"/>
+<view class='banner'>
+  <image src='https://lg-kn5jpef4-1257375135.cos.ap-shanghai.myqcloud.com/b044184145124818f7d26c75e796829f.jpg' mode='widthFix'></image>
+</view>
+<template is="nav"/>
+<view class='cunbigbox'>
+  <block wx:for="{{goodslist}}" wx:key="{{index}}">
+  <view class='cunbox'>
+    <image  data-index='{{index}}' bindtap='goods' lazy-load='true' src='{{item.src}}'></image>
+    <view class='textbox'>
+      <text class='name'>{{item.text}}</text>
+      <text class='price'>{{item.price}}</text>
+    </view>
+  </view>
+</block>
+</view>

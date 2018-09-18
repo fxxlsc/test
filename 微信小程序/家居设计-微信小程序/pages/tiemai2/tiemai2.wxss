@@ -1,0 +1,154 @@
+.box {
+  font-family: "微软雅黑"；;
+}
+
+.banner image {
+  width: 100%;
+}
+
+.goods-mes .goods-zh {
+  border-top: 1px solid #ccc;
+}
+
+.goods-mes .goods-zh view {
+  padding: 10px 5px;
+}
+
+.goods-mes .goods-zh .goods-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.goods-mes .goods-zh .goods-price {
+  color: red;
+  font-size: 24px;
+}
+
+.goods-pingjia {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.goods-pingjia .dengji {
+  display: flex;
+}
+
+.goods-pingjia .pingjia {
+  padding: 10px 5px;
+  display: inline-block;
+}
+
+.goods-pingjia .dengji .dengji-style {
+  width: 80px;
+  height: 30px;
+  background-color: #ffe4e1;
+  margin-left: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.goods-text .header {
+  padding: 10px 5px;
+}
+
+.goods-text .detail {
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.goods-shopping .shopping-btn {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  /* background-color: #ccc; */
+  width: 100%;
+}
+
+.goods-shopping .shopping-btn button {
+  flex-basis: 50%;
+}
+
+.goods-shopping .btn-color {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.goods-shopping .product-mes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-price {
+  margin-left: 20%;
+}
+
+.goods-shopping .product-mes image {
+  flex-basis: 10%;
+}
+
+.goods-shopping .product-mes text {
+  margin: 5px 10px;
+  font-size: 12px;
+}
+
+.goods-shopping .product-mes .close {
+  flex-basis: 10%;
+  margin-left: 60px;
+
+}
+
+.goods-shopping .product-math {
+  display: flex;
+}
+
+.text-one,.product-math {
+  border-bottom: 1px solid #ccc;
+}
+.text-one,.product-math text,.text-one,.product-math .product-sl{
+   margin-top: 10px;
+   margin-left: 10px;
+}
+.product-math .normal{
+  color: black
+}
+.product-math .disabled{
+  color: red;
+}
+.product-math input{
+  width: 40px;
+  height: 26px;
+  text-align: center;
+  font-size: 12px;
+}
+.product-math button{
+  border: 1px solid #ccc;
+}
+/*model  */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
